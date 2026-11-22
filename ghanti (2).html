@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>डिजिटल घण्टी - नेपाली विद्यालय स्वचालित घण्टी प्रणाली</title>
+    <!-- Tailwind CSS v3.4.17 (compiled & inlined: works fully offline) -->
+    <style>
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.bottom-0{bottom:0}.bottom-4{bottom:1rem}.right-0{right:0}.right-4{right:1rem}.top-0{top:0}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.col-span-2{grid-column:span 2/span 2}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.my-5{margin-top:1.25rem;margin-bottom:1.25rem}.-mb-16{margin-bottom:-4rem}.-mb-px{margin-bottom:-1px}.-mr-16{margin-right:-4rem}.-mt-16{margin-top:-4rem}.-mt-2{margin-top:-.5rem}.mb-1{margin-bottom:.25rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-2\.5{margin-top:.625rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-2{height:.5rem}.h-2\.5{height:.625rem}.h-3\.5{height:.875rem}.h-4{height:1rem}.h-40{height:10rem}.h-44{height:11rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.max-h-56{max-height:14rem}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-16{width:4rem}.w-2{width:.5rem}.w-2\.5{width:.625rem}.w-3\.5{width:.875rem}.w-4{width:1rem}.w-40{width:10rem}.w-44{width:11rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-9{width:2.25rem}.w-\[calc\(100\%-2rem\)\]{width:calc(100% - 2rem)}.w-full{width:100%}.min-w-0{min-width:0}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-pointer{cursor:pointer}.resize{resize:both}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.875rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.875rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-slate-100>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249/var(--tw-divide-opacity,1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.rounded-t-xl{border-top-left-radius:.75rem;border-top-right-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-b-4{border-bottom-width:4px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77/var(--tw-border-opacity,1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254/var(--tw-border-opacity,1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208/var(--tw-border-opacity,1))}.border-emerald-400\/30{border-color:rgba(52,211,153,.3)}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255/var(--tw-border-opacity,1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254/var(--tw-border-opacity,1))}.border-indigo-400\/30{border-color:rgba(129,140,248,.3)}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229/var(--tw-border-opacity,1))}.border-red-100{--tw-border-opacity:1;border-color:rgb(254 226 226/var(--tw-border-opacity,1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202/var(--tw-border-opacity,1))}.border-red-400\/30{border-color:hsla(0,91%,71%,.3)}.border-red-800{--tw-border-opacity:1;border-color:rgb(153 27 27/var(--tw-border-opacity,1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-200\/80{border-color:rgba(226,232,240,.8)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.border-transparent{border-color:transparent}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/15{border-color:hsla(0,0%,100%,.15)}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-black\/25{background-color:rgba(0,0,0,.25)}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.bg-emerald-400{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-500\/20{background-color:rgba(16,185,129,.2)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255/var(--tw-bg-opacity,1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1))}.bg-indigo-50\/60{background-color:rgba(238,242,255,.6)}.bg-indigo-50\/70{background-color:rgba(238,242,255,.7)}.bg-indigo-500\/20{background-color:rgba(99,102,241,.2)}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226/var(--tw-bg-opacity,1))}.bg-red-400{--tw-bg-opacity:1;background-color:rgb(248 113 113/var(--tw-bg-opacity,1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.bg-red-50\/70{background-color:hsla(0,86%,97%,.7)}.bg-red-500\/20{background-color:rgba(239,68,68,.2)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225/var(--tw-bg-opacity,1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-50\/70{background-color:rgba(248,250,252,.7)}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105/var(--tw-bg-opacity,1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/60{background-color:rgba(15,23,42,.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/15{background-color:hsla(0,0%,100%,.15)}.bg-white\/20{background-color:hsla(0,0%,100%,.2)}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-indigo-700{--tw-gradient-from:#4338ca var(--tw-gradient-from-position);--tw-gradient-to:rgba(67,56,202,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-slate-900{--tw-gradient-from:#0f172a var(--tw-gradient-from-position);--tw-gradient-to:rgba(15,23,42,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-indigo-800{--tw-gradient-to:rgba(55,48,163,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#3730a3 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-slate-800{--tw-gradient-to:rgba(30,41,59,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#1e293b var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-indigo-950{--tw-gradient-to:#1e1b4b var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-0{padding-bottom:0}.pb-3{padding-bottom:.75rem}.pr-1{padding-right:.25rem}.pt-1{padding-top:.25rem}.pt-2{padding-top:.5rem}.pt-3{padding-top:.75rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-tight{letter-spacing:-.025em}.tracking-wider{letter-spacing:.05em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14/var(--tw-text-opacity,1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15/var(--tw-text-opacity,1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208/var(--tw-text-opacity,1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183/var(--tw-text-opacity,1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87/var(--tw-text-opacity,1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70/var(--tw-text-opacity,1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59/var(--tw-text-opacity,1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254/var(--tw-text-opacity,1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity,1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202/var(--tw-text-opacity,1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163/var(--tw-text-opacity,1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129/var(--tw-text-opacity,1))}.text-red-100{--tw-text-opacity:1;color:rgb(254 226 226/var(--tw-text-opacity,1))}.text-red-200{--tw-text-opacity:1;color:rgb(254 202 202/var(--tw-text-opacity,1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38/var(--tw-text-opacity,1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28/var(--tw-text-opacity,1))}.text-red-700\/80{color:rgba(185,28,28,.8)}.text-red-900{--tw-text-opacity:1;color:rgb(127 29 29/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.accent-indigo-600{accent-color:#4f46e5}.opacity-55{opacity:.55}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-2xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgba(0,0,0,.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color)}.shadow-inner,.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.outline-none{outline:2px solid transparent;outline-offset:2px}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.after\:absolute:after{content:var(--tw-content);position:absolute}.after\:left-\[2px\]:after{content:var(--tw-content);left:2px}.after\:top-\[2px\]:after{content:var(--tw-content);top:2px}.after\:h-4:after{content:var(--tw-content);height:1rem}.after\:h-5:after{content:var(--tw-content);height:1.25rem}.after\:w-4:after{content:var(--tw-content);width:1rem}.after\:w-5:after{content:var(--tw-content);width:1.25rem}.after\:rounded-full:after{content:var(--tw-content);border-radius:9999px}.after\:bg-white:after{content:var(--tw-content);--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.after\:transition-all:after{content:var(--tw-content);transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.after\:content-\[\'\'\]:after{--tw-content:"";content:var(--tw-content)}.hover\:bg-amber-100:hover{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.hover\:bg-amber-400:hover{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6/var(--tw-bg-opacity,1))}.hover\:bg-blue-100:hover{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.hover\:bg-emerald-100:hover{--tw-bg-opacity:1;background-color:rgb(209 250 229/var(--tw-bg-opacity,1))}.hover\:bg-emerald-200:hover{--tw-bg-opacity:1;background-color:rgb(167 243 208/var(--tw-bg-opacity,1))}.hover\:bg-emerald-500\/30:hover{background-color:rgba(16,185,129,.3)}.hover\:bg-indigo-100:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255/var(--tw-bg-opacity,1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255/var(--tw-bg-opacity,1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202/var(--tw-bg-opacity,1))}.hover\:bg-red-100:hover{--tw-bg-opacity:1;background-color:rgb(254 226 226/var(--tw-bg-opacity,1))}.hover\:bg-red-200:hover{--tw-bg-opacity:1;background-color:rgb(254 202 202/var(--tw-bg-opacity,1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28/var(--tw-bg-opacity,1))}.hover\:bg-slate-100\/70:hover{background-color:rgba(241,245,249,.7)}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.hover\:bg-white\/15:hover{background-color:hsla(0,0%,100%,.15)}.hover\:bg-white\/20:hover{background-color:hsla(0,0%,100%,.2)}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241/var(--tw-border-opacity,1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-indigo-200:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(199 210 254/var(--tw-ring-opacity,1))}.active\:scale-\[0\.98\]:active{--tw-scale-x:0.98;--tw-scale-y:0.98;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.peer:checked~.peer-checked\:bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.peer:checked~.peer-checked\:bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.peer:checked~.peer-checked\:bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.peer:checked~.peer-checked\:bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.peer:checked~.peer-checked\:after\:translate-x-full:after{content:var(--tw-content);--tw-translate-x:100%;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.peer:focus~.peer-focus\:outline-none{outline:2px solid transparent;outline-offset:2px}@media (min-width:640px){.sm\:col-span-1{grid-column:span 1/span 1}.sm\:my-6{margin-top:1.5rem;margin-bottom:1.5rem}.sm\:table-cell{display:table-cell}.sm\:hidden{display:none}.sm\:w-auto{width:auto}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:gap-3{gap:.75rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:768px){.md\:text-7xl{font-size:4.5rem;line-height:1}}@media (min-width:1024px){.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:col-span-8{grid-column:span 8/span 8}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (min-width:1280px){.xl\:w-72{width:18rem}.xl\:flex-row{flex-direction:row}.xl\:items-center{align-items:center}}
+    </style>
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', 'Kohinoor Devanagari', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .font-mono-clock {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-variant-numeric: tabular-nums;
+        }
+        @keyframes bell-shake {
+            0%, 100% { transform: rotate(0deg); }
+            15% { transform: rotate(18deg); }
+            30% { transform: rotate(-16deg); }
+            45% { transform: rotate(14deg); }
+            60% { transform: rotate(-12deg); }
+            75% { transform: rotate(8deg); }
+        }
+        .animate-bell-shake {
+            animation: bell-shake 0.7s ease-in-out infinite;
+            transform-origin: top center;
+        }
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.55); }
+            70% { box-shadow: 0 0 0 14px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        .animate-pulse-ring {
+            animation: pulse-ring 1.5s infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+<style id="adminCss">
+body.viewer [onclick^="openBellModal"], body.viewer [onclick^="confirmDeleteBell"], body.viewer [onclick^="testBell"],
+body.viewer [onclick^="openSchoolModal"], body.viewer [onclick^="manualRing"], body.viewer [onclick^="confirmResetDefaults"],
+body.viewer [onclick^="exportScheduleJSON"], body.viewer [onclick^="confirmDeleteCustomAudio"],
+body.viewer label:has(#audioUploadInput) { display: none !important; }
+body.viewer #modeTabs, body.viewer label:has(#toggleHoliday), body.viewer label:has(#toggleAutoWeekend),
+body.viewer label:has(#toggleVoice), body.viewer label:has([onchange^="toggleBellEnabled"]) { pointer-events: none; opacity: .65; }
+</style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Top School Header -->
+    <header class="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white shadow-lg sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <!-- Editable School Identity -->
+                <div class="flex items-center gap-3.5 min-w-0">
+                    <div class="w-11 h-11 rounded-xl bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center shrink-0 shadow-inner">
+                        <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                        </svg>
+                    </div>
+                    <div class="min-w-0">
+                        <div class="flex items-center gap-2">
+                            <h1 id="schoolNameDisplay" class="text-lg sm:text-xl font-bold tracking-tight truncate">श्री जाल्पादेवी आधारभूत विद्यालय</h1>
+                            <button onclick="openSchoolModal()" title="विद्यालयको विवरण सम्पादन गर्नुहोस्" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-200 transition shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p id="schoolSubtitleDisplay" class="text-xs sm:text-sm text-slate-300 truncate">चम्पादेवी-१, महारुद्रभञ्ज्याङ, ओखलढुङ्गा</p>
+                    </div>
+                </div>
+
+                <!-- Master Status & Audio Activation -->
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                    <div id="masterStatusBadge" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span id="masterStatusText">स्वचालित घण्टी सक्रिय</span>
+                    </div>
+                    <button id="adminBtn" onclick="openAdminMenu()" style="margin-right:6px;padding:6px 12px;border-radius:9999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;font-size:12px;font-weight:700;cursor:pointer">🔑 Admin</button>
+                    <button id="headerAudioBtn" onclick="activateAudio(true)" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                        </svg>
+                        <span id="headerAudioText">अडियो सक्रिय गर्नुहोस्</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Audio Activation Warning Banner (Auto-hides once activated) -->
+    <div id="audioUnlockBanner" class="bg-amber-50 border-b border-amber-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div class="flex items-start gap-2.5 text-amber-900">
+                <svg class="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                </svg>
+                <p class="text-sm font-medium">
+                    ब्राउजरको सुरक्षा नियमअनुसार स्वचालित घण्टी बज्नको लागि कृपया एकपटक <strong>"अडियो सक्रिय गर्नुहोस्"</strong> बटनमा क्लिक गर्नुहोस्।
+                </p>
+            </div>
+            <button onclick="activateAudio(true)" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold shadow-sm transition shrink-0">
+                अडियो सक्रिय गर्नुहोस्
+            </button>
+        </div>
+    </div>
+
+    <!-- Active Ringing Alert Banner -->
+    <div id="ringingBanner" class="hidden bg-red-600 text-white shadow-lg border-b-4 border-red-800 sticky z-20" style="top: var(--header-h, 68px)">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center animate-pulse-ring shrink-0">
+                    <svg class="w-6 h-6 text-white animate-bell-shake" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="text-xs uppercase tracking-wider text-red-100 font-semibold">अहिले घण्टी बजिरहेको छ</div>
+                    <div id="ringingLabel" class="text-lg sm:text-xl font-extrabold">पहिलो घण्टी</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div id="ringingCountdown" class="font-mono-clock text-sm bg-black/25 px-3 py-1.5 rounded-lg font-semibold">बज्दैछ...</div>
+                <button onclick="audioEngine.stopAll()" class="px-5 py-2.5 rounded-xl bg-white text-red-700 hover:bg-red-50 font-extrabold text-sm shadow-md transition flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+                    घण्टी रोक्नुहोस् (Stop)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard Content -->
+    <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 flex-1">
+
+        <!-- Hero Section: Live Clock & Next Bell Countdown -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            <!-- Live Clock Card -->
+            <div class="lg:col-span-7 bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-indigo-50 rounded-full -mr-16 -mt-16 pointer-events-none"></div>
+                <div class="flex items-center justify-between gap-2 relative z-10">
+                    <div class="flex items-center gap-2">
+                        <span id="nepaliDayBadge" class="px-3 py-1 rounded-full text-xs sm:text-sm font-bold bg-indigo-100 text-indigo-800">शनिबार</span>
+                        <span id="currentDateDisplay" class="text-xs sm:text-sm font-medium text-slate-500">२०२६-११-२१</span>
+                    </div>
+                    <!-- 12h / 24h Toggle -->
+                    <div class="inline-flex rounded-xl bg-slate-100 p-1 border border-slate-200">
+                        <button id="btn12h" onclick="setClockFormat(false)" class="px-2.5 py-1 rounded-lg text-xs font-bold transition">12 घण्टा</button>
+                        <button id="btn24h" onclick="setClockFormat(true)" class="px-2.5 py-1 rounded-lg text-xs font-bold transition">24 घण्टा</button>
+                    </div>
+                </div>
+
+                <div class="my-5 sm:my-6 relative z-10 flex items-baseline gap-2 sm:gap-3 flex-wrap">
+                    <div id="liveClockTime" class="font-mono-clock text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900">00:00:00</div>
+                    <div id="liveClockAmPm" class="text-xl sm:text-2xl font-bold text-indigo-600 uppercase">AM</div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-2 pt-4 border-t border-slate-100 text-xs sm:text-sm text-slate-500 relative z-10">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        <span>प्रणाली समय सिङ्क गरिएको छ (अफलाइन तयार)</span>
+                    </div>
+                    <div id="wakeLockIndicator" class="hidden items-center gap-1.5 text-emerald-700 font-medium bg-emerald-50 px-2.5 py-0.5 rounded-full">
+                        <span>स्क्रिन अन सक्रिय</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Bell Countdown Card -->
+            <div class="lg:col-span-5 bg-gradient-to-br from-indigo-700 via-indigo-800 to-slate-900 text-white rounded-2xl shadow-md p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute bottom-0 right-0 w-44 h-44 bg-white/5 rounded-full -mr-16 -mb-16 pointer-events-none"></div>
+                <div class="flex items-center justify-between gap-2 relative z-10">
+                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-200">अर्को घण्टी (Next Bell)</span>
+                    <span id="effectiveModeBadge" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-white/15 text-white border border-white/15">नियमित</span>
+                </div>
+
+                <div class="my-4 relative z-10">
+                    <div id="nextBellName" class="text-2xl sm:text-3xl font-extrabold tracking-tight truncate">गणना हुँदैछ...</div>
+                    <div id="nextBellSubinfo" class="text-sm text-indigo-200 mt-1 flex items-center gap-2">
+                        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span id="nextBellTimeText">--:--</span>
+                    </div>
+                </div>
+
+                <div class="bg-black/25 rounded-xl p-3.5 border border-white/10 flex items-center justify-between relative z-10">
+                    <span class="text-xs sm:text-sm text-indigo-200 font-medium">बाँकी समय</span>
+                    <span id="nextBellCountdown" class="font-mono-clock text-2xl sm:text-3xl font-extrabold text-amber-300 tracking-wider">--:--:--</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manual & Emergency Control Panel + Master Volume -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-4 sm:p-5">
+            <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-2 h-5 bg-indigo-600 rounded-full"></span>
+                        म्यानुअल र आकस्मिक नियन्त्रण (Manual Control)
+                    </h2>
+                    <p class="text-xs text-slate-500 mt-0.5">तत्काल घण्टी बजाउन वा बजिरहेको आवाज रोक्न तलका बटन प्रयोग गर्नुहोस्</p>
+                </div>
+
+                <!-- Volume Control -->
+                <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 w-full xl:w-72">
+                    <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                    </svg>
+                    <input id="volumeSlider" type="range" min="0" max="100" value="85" oninput="handleVolumeChange(this.value)" class="w-full accent-indigo-600 cursor-pointer">
+                    <span id="volumeValue" class="font-mono-clock text-xs font-bold text-slate-700 w-9 text-right">85%</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-4">
+                <button onclick="manualRing('electric', 4, 'तत्काल घण्टी (म्यानुअल)')" class="p-3.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 active:scale-[0.98] border border-indigo-200 text-indigo-900 font-bold text-sm transition flex flex-col items-center justify-center gap-1.5 shadow-sm">
+                    <span class="text-xl">🔔</span>
+                    <span>तत्काल घण्टी बजाउनुहोस्</span>
+                </button>
+                <button onclick="manualRing('electric', 6, 'लामो घण्टी (म्यानुअल)')" class="p-3.5 rounded-xl bg-blue-50 hover:bg-blue-100 active:scale-[0.98] border border-blue-200 text-blue-900 font-bold text-sm transition flex flex-col items-center justify-center gap-1.5 shadow-sm">
+                    <span class="text-xl">🛎️</span>
+                    <span>लामो घण्टी (६ से.)</span>
+                </button>
+                <button onclick="manualRing('gong', 8, 'छुट्टी घण्टी (म्यानुअल)')" class="p-3.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 active:scale-[0.98] border border-emerald-200 text-emerald-900 font-bold text-sm transition flex flex-col items-center justify-center gap-1.5 shadow-sm">
+                    <span class="text-xl">🏫</span>
+                    <span>छुट्टी घण्टी (८ से.)</span>
+                </button>
+                <button onclick="manualRing('siren', 10, 'आकस्मिक साइरन!')" class="p-3.5 rounded-xl bg-amber-50 hover:bg-amber-100 active:scale-[0.98] border border-amber-300 text-amber-900 font-bold text-sm transition flex flex-col items-center justify-center gap-1.5 shadow-sm">
+                    <span class="text-xl">🚨</span>
+                    <span>आकस्मिक साइरन</span>
+                </button>
+                <button onclick="audioEngine.stopAll()" class="col-span-2 sm:col-span-1 p-3.5 rounded-xl bg-red-600 hover:bg-red-700 active:scale-[0.98] text-white font-bold text-sm transition flex flex-col items-center justify-center gap-1.5 shadow-md">
+                    <span class="text-xl">⏹️</span>
+                    <span>अडियो रोक्नुहोस् (Stop)</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Workspace: Schedule Table + Sidebar -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+
+            <!-- Left Column: Schedule Manager -->
+            <div class="lg:col-span-8 bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+                <!-- Mode Tabs -->
+                <div class="border-b border-slate-200 bg-slate-50/70 px-4 pt-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3">
+                        <h2 class="text-base sm:text-lg font-bold text-slate-900">समयतालिका व्यवस्थापन (Schedule)</h2>
+                        <button onclick="openBellModal()" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold shadow-sm transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                            नयाँ घण्टी थप्नुहोस्
+                        </button>
+                    </div>
+
+                    <div id="modeTabs" class="flex gap-1.5 overflow-x-auto pb-0 -mb-px">
+                        <button data-mode="regular" onclick="selectMode('regular')" class="mode-tab px-4 py-2.5 text-sm font-bold rounded-t-xl border-b-2 transition whitespace-nowrap">नियमित (सोम–शुक्र पूर्ण समय)</button>
+                        <button data-mode="halfday" onclick="selectMode('halfday')" class="mode-tab px-4 py-2.5 text-sm font-bold rounded-t-xl border-b-2 transition whitespace-nowrap">आधा दिन (Half Day)</button>
+                        <button data-mode="exam" onclick="selectMode('exam')" class="mode-tab px-4 py-2.5 text-sm font-bold rounded-t-xl border-b-2 transition whitespace-nowrap">परीक्षा (Exam Mode)</button>
+                        <button data-mode="custom" onclick="selectMode('custom')" class="mode-tab px-4 py-2.5 text-sm font-bold rounded-t-xl border-b-2 transition whitespace-nowrap">कस्टम (Custom Mode)</button>
+                    </div>
+                </div>
+
+                <!-- Schedule List -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-50 border-b border-slate-200 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                <th class="py-3 px-4 w-16 text-center">सक्रिय</th>
+                                <th class="py-3 px-4">समय</th>
+                                <th class="py-3 px-4">घण्टीको नाम</th>
+                                <th class="py-3 px-4 hidden sm:table-cell">आवाज र अवधि</th>
+                                <th class="py-3 px-4 text-right">कार्य</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleTableBody" class="divide-y divide-slate-100 text-sm">
+                            <!-- Rows injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="emptyScheduleState" class="hidden py-12 px-4 text-center text-slate-400">
+                    <p class="text-sm font-medium">यस मोडमा कुनै घण्टी थपिएको छैन।</p>
+                    <button onclick="openBellModal()" class="mt-3 px-4 py-2 rounded-xl bg-indigo-50 text-indigo-700 font-bold text-sm hover:bg-indigo-100 transition">+ घण्टी थप्नुहोस्</button>
+                </div>
+            </div>
+
+            <!-- Right Column: Smart Rules, Custom Audio Library, Backup -->
+            <div class="lg:col-span-4 space-y-6">
+
+                <!-- Smart Day Rules & System Settings -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5">
+                    <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-2 h-5 bg-emerald-500 rounded-full"></span>
+                        स्मार्ट नियम र सेटिङ
+                    </h3>
+                    <div class="space-y-3.5">
+                        <!-- Holiday Pause -->
+                        <label class="flex items-center justify-between gap-3 p-3 rounded-xl bg-red-50/70 border border-red-100 cursor-pointer">
+                            <div>
+                                <div class="text-sm font-bold text-red-900">सार्वजनिक बिदा मोड (Holiday Pause)</div>
+                                <div class="text-xs text-red-700/80">सार्वजनिक बिदाको दिन सबै घण्टी बन्द</div>
+                            </div>
+                            <input id="toggleHoliday" type="checkbox" onchange="updateSetting('holidayPause', this.checked)" class="sr-only peer">
+                            <div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-red-600 relative shrink-0"></div>
+                        </label>
+
+                        <!-- Auto-off Saturday & Sunday -->
+                        <label class="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-indigo-50/60 border border-indigo-100 hover:bg-indigo-50 cursor-pointer transition">
+                            <div>
+                                <div class="text-sm font-semibold text-slate-900">शनिबार र आइतबार स्वतः बन्द (साप्ताहिक बिदा)</div>
+                                <div class="text-xs text-slate-600">सोम–शुक्र पूर्ण विद्यालय खुल्ने, शनि–आइत बन्द</div>
+                            </div>
+                            <input id="toggleAutoWeekend" type="checkbox" onchange="updateSetting('autoOffWeekend', this.checked)" class="sr-only peer">
+                            <div class="w-11 h-6 bg-slate-300 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600 relative shrink-0"></div>
+                        </label>
+
+                        <!-- Voice Announcement -->
+                        <label class="flex items-center justify-between gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+                            <div>
+                                <div class="text-sm font-semibold text-slate-800">भ्वाइस सूचना (Voice)</div>
+                                <div class="text-xs text-slate-500">घण्टीपछि नाम पढेर सुनाउने (Speech API)</div>
+                            </div>
+                            <input id="toggleVoice" type="checkbox" onchange="updateSetting('voiceAnnouncement', this.checked)" class="sr-only peer">
+                            <div class="w-11 h-6 bg-slate-300 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600 relative shrink-0"></div>
+                        </label>
+
+                        <!-- Keep Screen Awake -->
+                        <label class="flex items-center justify-between gap-3 p-2.5 rounded-xl hover:bg-slate-50 cursor-pointer transition">
+                            <div>
+                                <div class="text-sm font-semibold text-slate-800">स्क्रिन अन राख्ने</div>
+                                <div class="text-xs text-slate-500">कम्प्युटर/मोबाइल स्क्रिन निभ्न नदिने</div>
+                            </div>
+                            <input id="toggleWakeLock" type="checkbox" onchange="handleWakeLockToggle(this.checked)" class="sr-only peer">
+                            <div class="w-11 h-6 bg-slate-300 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600 relative shrink-0"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Custom Audio Library (IndexedDB) -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5">
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                            <span class="w-2 h-5 bg-amber-500 rounded-full"></span>
+                            कस्टम अडियो लाइब्रेरी
+                        </h3>
+                        <label class="px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-xs font-bold cursor-pointer transition">
+                            + अडियो थप्नुहोस्
+                            <input id="audioUploadInput" type="file" accept="audio/*" onchange="handleAudioUpload(event)" class="hidden">
+                        </label>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-3">राष्ट्रिय गान, प्रार्थना वा आफ्नै सूचना (MP3/WAV) अपलोड गर्नुहोस्। यो ब्राउजरमै सुरक्षित रहन्छ।</p>
+
+                    <div id="customAudioList" class="space-y-2 max-h-56 overflow-y-auto pr-1">
+                        <!-- Custom audio items injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Backup & Reset -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5">
+                    <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="w-2 h-5 bg-slate-600 rounded-full"></span>
+                        ब्याकअप र रिसेट
+                    </h3>
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <button onclick="exportScheduleJSON()" class="px-3 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition flex items-center justify-center gap-1.5">
+                            <span>⬇️</span> ब्याकअप (Export)
+                        </button>
+                        <label class="px-3 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer">
+                            <span>⬆️</span> रिस्टोर (Import)
+                            <input type="file" accept=".json" onchange="importScheduleJSON(event)" class="hidden">
+                        </label>
+                    </div>
+                    <button onclick="confirmResetDefaults()" class="mt-2.5 w-full px-3 py-2.5 rounded-xl bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 text-xs font-bold transition">
+                        डिफल्टमा फर्काउनुहोस् (Reset Defaults)
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+            <div>स्वचालित डिजिटल घण्टी प्रणाली • १००% अफलाइन सक्षम (Web Audio + IndexedDB)</div>
+            <div>सुझाव: निरन्तर सञ्चालनको लागि कम्प्युटरको Sleep Mode लाई 'Never' मा राख्नुहोस्।</div>
+        </div>
+    </footer>
+
+    <!-- Modal: Add / Edit Bell -->
+    <div id="bellModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+            <div class="px-5 py-4 bg-slate-900 text-white flex items-center justify-between">
+                <h3 id="bellModalTitle" class="text-base font-bold">नयाँ घण्टी थप्नुहोस्</h3>
+                <button onclick="closeBellModal()" class="p-1 rounded-lg hover:bg-white/15 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <form id="bellForm" onsubmit="saveBellForm(event)" class="p-5 space-y-4">
+                <input type="hidden" id="bellEditId">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">समय (HH:MM) *</label>
+                        <input id="bellTimeInput" type="time" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none font-mono-clock font-bold text-slate-900">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">अवधि (सेकेन्ड) *</label>
+                        <input id="bellDurationInput" type="number" min="0" max="600" value="5" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none font-mono-clock font-bold text-slate-900">
+                    </div>
+                </div>
+                <p class="text-[11px] text-slate-500 -mt-2">नोट: कस्टम MP3 अडियो पूरै बजाउन अवधिमा <strong>0</strong> राख्नुहोस्। बिल्ट-इन आवाज अधिकतम ६० सेकेन्ड बज्छ।</p>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">घण्टीको नाम / विवरण *</label>
+                    <input id="bellLabelInput" type="text" required placeholder="जस्तै: पहिलो घण्टी, खाजा समय" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">आवाजको प्रकार (Sound Type)</label>
+                    <select id="bellSoundSelect" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none text-sm bg-white">
+                        <!-- Populated dynamically with built-in + custom audio -->
+                    </select>
+                </div>
+
+                <label class="flex items-center gap-2.5 pt-1 cursor-pointer">
+                    <input id="bellEnabledInput" type="checkbox" checked class="w-4 h-4 accent-indigo-600 rounded">
+                    <span class="text-sm font-medium text-slate-700">यो घण्टी सक्रिय राख्नुहोस्</span>
+                </label>
+
+                <div class="flex items-center justify-end gap-2 pt-3 border-t border-slate-100">
+                    <button type="button" onclick="closeBellModal()" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold transition">रद्द गर्नुहोस्</button>
+                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold shadow-sm transition">सुरक्षित गर्नुहोस्</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Edit School Info -->
+    <div id="schoolModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+            <div class="px-5 py-4 bg-slate-900 text-white flex items-center justify-between">
+                <h3 class="text-base font-bold">विद्यालयको विवरण सम्पादन</h3>
+                <button onclick="closeSchoolModal()" class="p-1 rounded-lg hover:bg-white/15 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <form onsubmit="saveSchoolInfo(event)" class="p-5 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">विद्यालयको नाम *</label>
+                    <input id="schoolNameInput" type="text" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">ठेगाना / उपशीर्षक</label>
+                    <input id="schoolSubtitleInput" type="text" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none text-sm">
+                </div>
+                <div class="flex items-center justify-end gap-2 pt-3 border-t border-slate-100">
+                    <button type="button" onclick="closeSchoolModal()" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold transition">रद्द गर्नुहोस्</button>
+                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold shadow-sm transition">सुरक्षित गर्नुहोस्</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Custom Confirmation Dialog (No native confirm/alert) -->
+    <div id="confirmModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm p-5 space-y-4">
+            <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 id="confirmTitle" class="text-base font-bold text-slate-900">पुष्टि गर्नुहोस्</h3>
+                    <p id="confirmMessage" class="text-sm text-slate-600 mt-1">के तपाईँ यो कार्य गर्न निश्चित हुनुहुन्छ?</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-end gap-2 pt-2">
+                <button onclick="closeConfirmModal()" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold transition">रद्द गर्नुहोस्</button>
+                <button id="confirmActionBtn" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-700 text-white text-sm font-bold shadow-sm transition">हो, गर्नुहोस्</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 max-w-sm w-[calc(100%-2rem)] sm:w-auto pointer-events-none"></div>
+
+    <script>
+        /* ==========================================================================
+           CONSTANTS, DEFAULTS & NEPALI LOCALIZATION
+           ========================================================================== */
+        const STORAGE_KEY = 'nepali_school_digital_bell_v2';
+        const NEPALI_DAYS = ['आइतबार', 'सोमबार', 'मंगलबार', 'बुधबार', 'बिहीबार', 'शुक्रबार', 'शनिबार'];
+        const MODE_LABELS = {
+            regular: 'नियमित (सोम–शुक्र पूर्ण समय)',
+            halfday: 'आधा दिन (Half Day)',
+            exam: 'परीक्षा (Exam Mode)',
+            custom: 'कस्टम (Custom Mode)'
+        };
+        const BUILTIN_SOUNDS = {
+            electric: 'इलेक्ट्रिक घण्टी (Electric Bell)',
+            gong: 'परम्परागत घण्टी (Brass Gong)',
+            chime: 'मधुर धुन (Soft Chime)',
+            siren: 'आकस्मिक साइरन (Emergency Siren)'
+        };
+
+        function getDefaultState() {
+            return {
+                school: {
+                    name: 'श्री जाल्पादेवी आधारभूत विद्यालय',
+                    subtitle: 'चम्पादेवी-१, महारुद्रभञ्ज्याङ, ओखलढुङ्गा'
+                },
+                activeMode: 'regular',
+                settings: {
+                    use24Hour: false,
+                    autoOffWeekend: true,
+                    holidayPause: false,
+                    voiceAnnouncement: false,
+                    volume: 85
+                },
+                schedules: {
+                    regular: [
+                        { id: 'r1', time: '10:00', label: 'प्रार्थना / राष्ट्रिय गान (Assembly)', sound: 'chime', duration: 6, enabled: true },
+                        { id: 'r2', time: '10:15', label: 'पहिलो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'r3', time: '11:00', label: 'दोस्रो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'r4', time: '11:45', label: 'तेस्रो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'r5', time: '12:30', label: 'चौथो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'r6', time: '13:15', label: 'टिफिन / खाजा समय (Tiffin)', sound: 'gong', duration: 6, enabled: true },
+                        { id: 'r7', time: '14:00', label: 'पाँचौँ घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'r8', time: '14:45', label: 'छैटौँ घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'r9', time: '15:30', label: 'सातौँ घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'r10', time: '16:00', label: 'छुट्टी घण्टी', sound: 'gong', duration: 8, enabled: true }
+                    ],
+                    halfday: [
+                        { id: 'h1', time: '10:00', label: 'प्रार्थना / राष्ट्रिय गान (Assembly)', sound: 'chime', duration: 6, enabled: true },
+                        { id: 'h2', time: '10:15', label: 'पहिलो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'h3', time: '11:00', label: 'दोस्रो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'h4', time: '11:45', label: 'तेस्रो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'h5', time: '12:30', label: 'चौथो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'h6', time: '13:30', label: 'छुट्टी घण्टी (आधा दिन)', sound: 'gong', duration: 8, enabled: true }
+                    ],
+                    exam: [
+                        { id: 'e1', time: '10:00', label: 'प्रवेश घण्टी', sound: 'chime', duration: 5, enabled: true },
+                        { id: 'e2', time: '10:15', label: 'परीक्षा सुरु', sound: 'electric', duration: 6, enabled: true },
+                        { id: 'e3', time: '11:15', label: '१ घण्टा पूरा', sound: 'gong', duration: 3, enabled: true },
+                        { id: 'e4', time: '12:15', label: '२ घण्टा पूरा', sound: 'gong', duration: 3, enabled: true },
+                        { id: 'e5', time: '13:00', label: '१५ मिनेट बाँकी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'e6', time: '13:15', label: 'परीक्षा समाप्त', sound: 'gong', duration: 8, enabled: true }
+                    ],
+                    custom: [
+                        { id: 'c1', time: '10:30', label: 'प्रार्थना (कस्टम समय)', sound: 'chime', duration: 6, enabled: true },
+                        { id: 'c2', time: '10:45', label: 'पहिलो घण्टी', sound: 'electric', duration: 4, enabled: true },
+                        { id: 'c3', time: '15:30', label: 'छुट्टी घण्टी', sound: 'gong', duration: 8, enabled: true }
+                    ]
+                }
+            };
+        }
+
+        let appState = loadState();
+        let customAudios = []; // Metadata + blob loaded from IndexedDB
+        let lastTriggeredKeys = new Set(); // Prevent duplicate triggers in same minute
+        let wakeLockSentinel = null;
+        let confirmCallback = null;
+
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (!raw) return getDefaultState();
+                const parsed = JSON.parse(raw);
+                const def = getDefaultState();
+                return {
+                    school: { ...def.school, ...(parsed.school || {}) },
+                    activeMode: MODE_LABELS[parsed.activeMode] ? parsed.activeMode : def.activeMode,
+                    settings: { ...def.settings, ...(parsed.settings || {}) },
+                    schedules: { ...def.schedules, ...(parsed.schedules || {}) }
+                };
+            } catch (e) {
+                console.error('State load error:', e);
+                return getDefaultState();
+            }
+        }
+
+        function saveState() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+            } catch (e) {
+                console.error('State save error:', e);
+                showToast('डाटा सुरक्षित गर्न समस्या आयो।', 'error');
+            }
+        }
+
+        /* ==========================================================================
+           INDEXEDDB CUSTOM AUDIO LIBRARY
+           ========================================================================== */
+        const AudioDB = {
+            dbName: 'NepaliDigitalBellAudioDB',
+            storeName: 'audioFiles',
+            db: null,
+
+            async open() {
+                if (this.db) return this.db;
+                return new Promise((resolve, reject) => {
+                    try {
+                        const req = indexedDB.open(this.dbName, 1);
+                        req.onupgradeneeded = (e) => {
+                            const db = e.target.result;
+                            if (!db.objectStoreNames.contains(this.storeName)) {
+                                db.createObjectStore(this.storeName, { keyPath: 'id' });
+                            }
+                        };
+                        req.onsuccess = (e) => {
+                            this.db = e.target.result;
+                            resolve(this.db);
+                        };
+                        req.onerror = () => reject(req.error);
+                    } catch (err) {
+                        reject(err);
+                    }
+                });
+            },
+
+            async getAll() {
+                const db = await this.open();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(this.storeName, 'readonly');
+                    const req = tx.objectStore(this.storeName).getAll();
+                    req.onsuccess = () => resolve(req.result || []);
+                    req.onerror = () => reject(req.error);
+                });
+            },
+
+            async get(id) {
+                const db = await this.open();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(this.storeName, 'readonly');
+                    const req = tx.objectStore(this.storeName).get(id);
+                    req.onsuccess = () => resolve(req.result || null);
+                    req.onerror = () => reject(req.error);
+                });
+            },
+
+            async put(record) {
+                const db = await this.open();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(this.storeName, 'readwrite');
+                    const req = tx.objectStore(this.storeName).put(record);
+                    req.onsuccess = () => resolve(record);
+                    req.onerror = () => reject(req.error);
+                });
+            },
+
+            async delete(id) {
+                const db = await this.open();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(this.storeName, 'readwrite');
+                    const req = tx.objectStore(this.storeName).delete(id);
+                    req.onsuccess = () => resolve();
+                    req.onerror = () => reject(req.error);
+                });
+            }
+        };
+
+        /* ==========================================================================
+           OFFLINE WEB AUDIO ENGINE (SYNTHESIZED BELLS + CUSTOM AUDIO + SPEECH)
+           ========================================================================== */
+        class DigitalBellAudioEngine {
+            constructor() {
+                this.ctx = null;
+                this.masterGain = null;
+                this.isUnlocked = false;
+                this.speaking = false;
+                this.playToken = 0;
+                this.activeNodes = [];
+                this.activeTimers = [];
+                this.activeHtmlAudio = null;
+                this.activeObjectUrl = null;
+                this.countdownTimer = null;
+                this.volume = (appState.settings.volume ?? 85) / 100;
+            }
+
+            ensureContext() {
+                if (!this.ctx) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    if (!AudioCtx) return null;
+                    this.ctx = new AudioCtx();
+                    this.masterGain = this.ctx.createGain();
+                    this.masterGain.gain.value = this.volume;
+                    this.masterGain.connect(this.ctx.destination);
+                    this.ctx.onstatechange = () => {
+                        this.isUnlocked = this.ctx.state === 'running';
+                        updateAudioUnlockUI();
+                    };
+                }
+                if (this.ctx.state === 'suspended') {
+                    this.ctx.resume().catch(() => {});
+                }
+                this.isUnlocked = this.ctx.state === 'running';
+                return this.ctx;
+            }
+
+            setVolume(percent) {
+                this.volume = Math.max(0, Math.min(1, percent / 100));
+                if (this.masterGain && this.ctx) {
+                    this.masterGain.gain.setTargetAtTime(this.volume, this.ctx.currentTime, 0.02);
+                }
+                if (this.activeHtmlAudio) {
+                    this.activeHtmlAudio.volume = this.volume;
+                }
+            }
+
+            stopAll() {
+                this.playToken++;
+                this.speaking = false;
+                this.activeTimers.forEach(t => clearTimeout(t));
+                this.activeTimers = [];
+
+                if (this.countdownTimer) {
+                    clearInterval(this.countdownTimer);
+                    this.countdownTimer = null;
+                }
+
+                this.activeNodes.forEach(node => {
+                    try { if (typeof node.stop === 'function') node.stop(); } catch (_) {}
+                    try { if (typeof node.disconnect === 'function') node.disconnect(); } catch (_) {}
+                });
+                this.activeNodes = [];
+
+                if (this.activeHtmlAudio) {
+                    try {
+                        this.activeHtmlAudio.pause();
+                        this.activeHtmlAudio.currentTime = 0;
+                    } catch (_) {}
+                    this.activeHtmlAudio = null;
+                }
+                if (this.activeObjectUrl) {
+                    URL.revokeObjectURL(this.activeObjectUrl);
+                    this.activeObjectUrl = null;
+                }
+
+                if ('speechSynthesis' in window) {
+                    try { window.speechSynthesis.cancel(); } catch (_) {}
+                }
+
+                hideRingingBanner();
+            }
+
+            async play(soundKey, durationSec = 5, label = 'घण्टी', speakAfter = false) {
+                this.stopAll();
+                const token = this.playToken;
+                const ctx = this.ensureContext();
+                updateAudioUnlockUI();
+
+                showRingingBanner(label, durationSec);
+
+                // Built-in synthesized sounds are capped at 60s to keep the browser responsive
+                const synthDur = Math.min(60, Math.max(1, Number(durationSec) || 5));
+                const fallbackBell = () => {
+                    if (!ctx) {
+                        showToast('यो ब्राउजरमा Web Audio समर्थित छैन।', 'error');
+                        hideRingingBanner();
+                        return;
+                    }
+                    this.playElectricBell(ctx, synthDur, label, speakAfter);
+                };
+
+                // Custom uploaded audio from IndexedDB
+                if (soundKey && soundKey.startsWith('custom:')) {
+                    const audioId = soundKey.replace('custom:', '');
+                    try {
+                        const record = await AudioDB.get(audioId);
+                        if (token !== this.playToken) return; // stopped or replaced while loading
+                        if (!record || !record.blob) {
+                            showToast('कस्टम अडियो फेला परेन, इलेक्ट्रिक घण्टी बजाइँदैछ।', 'error');
+                            fallbackBell();
+                            return;
+                        }
+                        this.playCustomBlob(record.blob, durationSec, label, speakAfter);
+                    } catch (err) {
+                        console.error('Custom audio error:', err);
+                        if (token === this.playToken) fallbackBell();
+                    }
+                    return;
+                }
+
+                if (!ctx) {
+                    showToast('यो ब्राउजरमा Web Audio समर्थित छैन।', 'error');
+                    hideRingingBanner();
+                    return;
+                }
+
+                switch (soundKey) {
+                    case 'gong':
+                        this.playBrassGong(ctx, synthDur, label, speakAfter);
+                        break;
+                    case 'chime':
+                        this.playSoftChime(ctx, synthDur, label, speakAfter);
+                        break;
+                    case 'siren':
+                        this.playEmergencySiren(ctx, synthDur, label, speakAfter);
+                        break;
+                    case 'electric':
+                    default:
+                        this.playElectricBell(ctx, synthDur, label, speakAfter);
+                        break;
+                }
+            }
+
+            scheduleFinish(durationSec, label, speakAfter) {
+                if (this.countdownTimer) clearInterval(this.countdownTimer);
+                let remaining = durationSec;
+                const cdEl = document.getElementById('ringingCountdown');
+                if (cdEl) cdEl.textContent = `${remaining} सेकेन्ड बाँकी`;
+
+                this.countdownTimer = setInterval(() => {
+                    remaining -= 1;
+                    if (remaining > 0 && cdEl) {
+                        cdEl.textContent = `${remaining} सेकेन्ड बाँकी`;
+                    }
+                }, 1000);
+
+                const endTimer = setTimeout(() => {
+                    if (speakAfter) {
+                        if (this.countdownTimer) { clearInterval(this.countdownTimer); this.countdownTimer = null; }
+                        this.speakLabel(label);
+                    } else {
+                        this.stopAll(); // releases audio nodes and hides the banner
+                    }
+                }, durationSec * 1000 + 250);
+                this.activeTimers.push(endTimer);
+            }
+
+            /* 1. Electric School Bell (Rapid metallic clapper strikes) */
+            playElectricBell(ctx, durationSec, label, speakAfter) {
+                const startTime = ctx.currentTime + 0.03;
+                const strikeInterval = 0.055; // ~18 strikes/sec
+                const totalStrikes = Math.floor(durationSec / strikeInterval);
+                const partials = [1180, 2375, 3680, 5140];
+
+                for (let i = 0; i < totalStrikes; i++) {
+                    const t = startTime + i * strikeInterval;
+                    partials.forEach((freq, idx) => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = idx % 2 === 0 ? 'sine' : 'triangle';
+                        osc.frequency.setValueAtTime(freq + (Math.random() * 14 - 7), t);
+
+                        const amp = [0.35, 0.25, 0.18, 0.12][idx];
+                        gain.gain.setValueAtTime(0.0001, t);
+                        gain.gain.linearRampToValueAtTime(amp, t + 0.004);
+                        gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.065);
+
+                        osc.connect(gain);
+                        gain.connect(this.masterGain);
+                        osc.start(t);
+                        osc.stop(t + 0.07);
+                        this.activeNodes.push(osc, gain);
+                    });
+                }
+                this.scheduleFinish(durationSec, label, speakAfter);
+            }
+
+            /* 2. Traditional Metallic Brass Gong */
+            playBrassGong(ctx, durationSec, label, speakAfter) {
+                const startTime = ctx.currentTime + 0.03;
+                const strikeEvery = 1.75;
+                const strikes = Math.max(1, Math.ceil(durationSec / strikeEvery));
+                const partials = [
+                    { f: 310, a: 0.45, d: 1.8 },
+                    { f: 622, a: 0.30, d: 1.5 },
+                    { f: 948, a: 0.22, d: 1.2 },
+                    { f: 1475, a: 0.16, d: 0.9 },
+                    { f: 2210, a: 0.10, d: 0.6 }
+                ];
+
+                for (let s = 0; s < strikes; s++) {
+                    const t = startTime + s * strikeEvery;
+                    if (t - startTime >= durationSec) break;
+                    partials.forEach((p, idx) => {
+                        const osc = ctx.createOscillator();
+                        const gain = ctx.createGain();
+                        osc.type = idx === 0 ? 'sine' : 'triangle';
+                        osc.frequency.setValueAtTime(p.f, t);
+
+                        gain.gain.setValueAtTime(0.0001, t);
+                        gain.gain.linearRampToValueAtTime(p.a, t + 0.012);
+                        gain.gain.exponentialRampToValueAtTime(0.0001, t + p.d);
+
+                        osc.connect(gain);
+                        gain.connect(this.masterGain);
+                        osc.start(t);
+                        osc.stop(t + p.d + 0.05);
+                        this.activeNodes.push(osc, gain);
+                    });
+                }
+                this.scheduleFinish(durationSec, label, speakAfter);
+            }
+
+            /* 3. Soft Melodic Chime (Westminster / School Intercom) */
+            playSoftChime(ctx, durationSec, label, speakAfter) {
+                const startTime = ctx.currentTime + 0.03;
+                const notes = [523.25, 659.25, 783.99, 1046.50, 783.99, 659.25, 523.25];
+                const step = 0.55;
+                let elapsed = 0;
+                let idx = 0;
+
+                while (elapsed < durationSec) {
+                    const t = startTime + elapsed;
+                    const freq = notes[idx % notes.length];
+
+                    const osc = ctx.createOscillator();
+                    const osc2 = ctx.createOscillator();
+                    const gain = ctx.createGain();
+
+                    osc.type = 'sine';
+                    osc2.type = 'triangle';
+                    osc.frequency.setValueAtTime(freq, t);
+                    osc2.frequency.setValueAtTime(freq * 2, t);
+
+                    gain.gain.setValueAtTime(0.0001, t);
+                    gain.gain.linearRampToValueAtTime(0.35, t + 0.02);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, t + 1.1);
+
+                    osc.connect(gain);
+                    osc2.connect(gain);
+                    gain.connect(this.masterGain);
+
+                    osc.start(t);
+                    osc2.start(t);
+                    osc.stop(t + 1.15);
+                    osc2.stop(t + 1.15);
+                    this.activeNodes.push(osc, osc2, gain);
+
+                    elapsed += step;
+                    idx++;
+                }
+                this.scheduleFinish(durationSec, label, speakAfter);
+            }
+
+            /* 4. Emergency Siren */
+            playEmergencySiren(ctx, durationSec, label, speakAfter) {
+                const startTime = ctx.currentTime + 0.03;
+                const endTime = startTime + durationSec;
+
+                const osc = ctx.createOscillator();
+                const filter = ctx.createBiquadFilter();
+                const gain = ctx.createGain();
+
+                osc.type = 'sawtooth';
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(1800, startTime);
+
+                const cycle = 1.2;
+                let t = startTime;
+                osc.frequency.setValueAtTime(560, startTime);
+                while (t < endTime) {
+                    osc.frequency.linearRampToValueAtTime(1180, Math.min(t + cycle / 2, endTime));
+                    osc.frequency.linearRampToValueAtTime(560, Math.min(t + cycle, endTime));
+                    t += cycle;
+                }
+
+                gain.gain.setValueAtTime(0.001, startTime);
+                gain.gain.linearRampToValueAtTime(0.32, startTime + 0.08);
+                gain.gain.setValueAtTime(0.32, Math.max(startTime + 0.1, endTime - 0.1));
+                gain.gain.linearRampToValueAtTime(0.0001, endTime);
+
+                osc.connect(filter);
+                filter.connect(gain);
+                gain.connect(this.masterGain);
+
+                osc.start(startTime);
+                osc.stop(endTime + 0.05);
+                this.activeNodes.push(osc, filter, gain);
+
+                this.scheduleFinish(durationSec, label, speakAfter);
+            }
+
+            /* 5. Play Custom Uploaded Blob */
+            playCustomBlob(blob, durationSec, label, speakAfter) {
+                const url = URL.createObjectURL(blob);
+                this.activeObjectUrl = url;
+                const audio = new Audio(url);
+                audio.volume = this.volume;
+                this.activeHtmlAudio = audio;
+
+                const cdEl = document.getElementById('ringingCountdown');
+                if (cdEl) cdEl.textContent = durationSec > 0 ? `${durationSec} सेकेन्ड` : 'पूरा अडियो बज्दैछ...';
+
+                audio.onended = () => {
+                    if (speakAfter) {
+                        this.speakLabel(label);
+                    } else {
+                        this.stopAll();
+                    }
+                };
+                audio.onerror = () => {
+                    showToast('कस्टम अडियो बजाउन सकिएन।', 'error');
+                    this.stopAll();
+                };
+
+                audio.play().catch(err => {
+                    console.error('Audio play blocked:', err);
+                    showToast('अडियो बज्नको लागि "अडियो सक्रिय गर्नुहोस्" मा क्लिक गर्नुहोस्।', 'error');
+                    this.stopAll();
+                });
+
+                if (durationSec > 0) {
+                    this.scheduleFinish(durationSec, label, speakAfter);
+                    const stopTimer = setTimeout(() => {
+                        if (this.activeHtmlAudio === audio) {
+                            audio.pause();
+                        }
+                    }, durationSec * 1000);
+                    this.activeTimers.push(stopTimer);
+                }
+            }
+
+            /* 6. Optional Web Speech API Voice Announcement */
+            speakLabel(text) {
+                if (this.speaking) return; // avoid announcing twice
+                this.speaking = true;
+                if (!('speechSynthesis' in window) || !text) {
+                    hideRingingBanner();
+                    return;
+                }
+                try {
+                    window.speechSynthesis.cancel();
+                    const utter = new SpeechSynthesisUtterance(text);
+                    const voices = window.speechSynthesis.getVoices();
+                    const neVoice = voices.find(v => v.lang.startsWith('ne')) || voices.find(v => v.lang.startsWith('hi'));
+                    if (neVoice) utter.voice = neVoice;
+                    utter.lang = neVoice ? neVoice.lang : 'ne-NP';
+                    utter.rate = 0.92;
+                    utter.volume = this.volume;
+
+                    const cdEl = document.getElementById('ringingCountdown');
+                    if (cdEl) cdEl.textContent = 'भ्वाइस सूचना...';
+
+                    utter.onend = () => hideRingingBanner();
+                    utter.onerror = () => hideRingingBanner();
+                    window.speechSynthesis.speak(utter);
+                } catch (e) {
+                    hideRingingBanner();
+                }
+            }
+        }
+
+        const audioEngine = new DigitalBellAudioEngine();
+
+        /* ==========================================================================
+           AUDIO ACTIVATION & WAKE LOCK
+           ========================================================================== */
+        function activateAudio(playTestBeep = false) {
+            const ctx = audioEngine.ensureContext();
+            updateAudioUnlockUI();
+            if (playTestBeep && ctx) {
+                // Short soft confirmation chime
+                const t = ctx.currentTime;
+                const osc = ctx.createOscillator();
+                const g = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(880, t);
+                g.gain.setValueAtTime(0.001, t);
+                g.gain.linearRampToValueAtTime(0.18, t + 0.01);
+                g.gain.exponentialRampToValueAtTime(0.0001, t + 0.22);
+                osc.connect(g);
+                g.connect(audioEngine.masterGain);
+                osc.start(t);
+                osc.stop(t + 0.25);
+                showToast('अडियो प्रणाली सफलतापूर्वक सक्रिय भयो!', 'success');
+            }
+        }
+
+        function updateAudioUnlockUI() {
+            const banner = document.getElementById('audioUnlockBanner');
+            const btn = document.getElementById('headerAudioBtn');
+            const txt = document.getElementById('headerAudioText');
+            if (!audioEngine.isUnlocked) {
+                if (audioEngine.ctx) banner.classList.remove('hidden');
+                btn.classList.add('bg-amber-500', 'hover:bg-amber-400', 'text-slate-950');
+                btn.classList.remove('bg-emerald-500/20', 'hover:bg-emerald-500/30', 'text-emerald-200', 'border', 'border-emerald-400/30');
+                txt.textContent = 'अडियो सक्रिय गर्नुहोस्';
+            } else {
+                banner.classList.add('hidden');
+                btn.classList.remove('bg-amber-500', 'hover:bg-amber-400', 'text-slate-950');
+                btn.classList.add('bg-emerald-500/20', 'hover:bg-emerald-500/30', 'text-emerald-200', 'border', 'border-emerald-400/30');
+                txt.textContent = 'अडियो सक्रिय छ';
+            }
+        }
+
+        async function acquireWakeLock() {
+            const indicator = document.getElementById('wakeLockIndicator');
+            const sentinel = await navigator.wakeLock.request('screen');
+            wakeLockSentinel = sentinel;
+            sentinel.addEventListener('release', () => {
+                // The browser releases the lock when the tab is hidden; clear it so it can be re-acquired
+                if (wakeLockSentinel === sentinel) wakeLockSentinel = null;
+                indicator.classList.add('hidden');
+                indicator.classList.remove('inline-flex');
+            });
+            indicator.classList.remove('hidden');
+            indicator.classList.add('inline-flex');
+        }
+
+        async function handleWakeLockToggle(enabled) {
+            const indicator = document.getElementById('wakeLockIndicator');
+            if (enabled) {
+                if ('wakeLock' in navigator) {
+                    try {
+                        await acquireWakeLock();
+                        showToast('स्क्रिन अन राख्ने सुविधा सक्रिय भयो।', 'success');
+                    } catch (err) {
+                        document.getElementById('toggleWakeLock').checked = false;
+                        showToast('स्क्रिन अन राख्न सकिएन (ब्याट्री सेभर वा ब्राउजर सीमितता)।', 'error');
+                    }
+                } else {
+                    document.getElementById('toggleWakeLock').checked = false;
+                    showToast('तपाईँको ब्राउजरले Wake Lock API समर्थन गर्दैन।', 'error');
+                }
+            } else {
+                if (wakeLockSentinel) {
+                    try { await wakeLockSentinel.release(); } catch (_) {}
+                    wakeLockSentinel = null;
+                }
+                indicator.classList.add('hidden');
+                indicator.classList.remove('inline-flex');
+                showToast('स्क्रिन अन राख्ने सुविधा बन्द गरियो।', 'info');
+            }
+        }
+
+        document.addEventListener('visibilitychange', async () => {
+            if (document.visibilityState === 'visible' && document.getElementById('toggleWakeLock').checked && !wakeLockSentinel && 'wakeLock' in navigator) {
+                try {
+                    await acquireWakeLock();
+                } catch (_) {}
+            }
+        });
+
+        /* ==========================================================================
+           CORE CLOCK, SMART DAY RULES & AUTO-TRIGGER LOOP
+           ========================================================================== */
+        function getEffectiveScheduleInfo(now) {
+            const dayIdx = now.getDay(); // 0=Sunday, 1=Mon ... 5=Friday, 6=Saturday
+            const s = appState.settings;
+
+            if (s.holidayPause) {
+                return { paused: true, reason: 'सार्वजनिक बिदा मोडमा बन्द छ', mode: appState.activeMode, bells: [] };
+            }
+            if ((dayIdx === 6 || dayIdx === 0) && s.autoOffWeekend) {
+                return { paused: true, reason: 'साप्ताहिक बिदा (शनिबार र आइतबार बन्द)', mode: appState.activeMode, bells: [] };
+            }
+
+            // Monday to Friday (including Friday full day) uses the selected active mode directly
+            const effectiveMode = appState.activeMode;
+            const bells = (appState.schedules[effectiveMode] || [])
+                .filter(b => b.enabled)
+                .slice()
+                .sort((a, b) => a.time.localeCompare(b.time));
+
+            return { paused: false, reason: '', mode: effectiveMode, bells };
+        }
+
+        function formatDisplayTime(hhmm) {
+            if (!hhmm || !hhmm.includes(':')) return hhmm;
+            const [hStr, mStr] = hhmm.split(':');
+            let h = parseInt(hStr, 10);
+            if (appState.settings.use24Hour) {
+                return `${String(h).padStart(2, '0')}:${mStr}`;
+            }
+            const ampm = h >= 12 ? 'PM' : 'AM';
+            h = h % 12 || 12;
+            return `${String(h).padStart(2, '0')}:${mStr} ${ampm}`;
+        }
+
+        function formatCountdown(totalSec) {
+            const s = Math.max(0, Math.floor(totalSec));
+            const hrs = Math.floor(s / 3600);
+            const mins = Math.floor((s % 3600) / 60);
+            const secs = s % 60;
+            return `${String(hrs).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+
+        let currentNextBellId = null;
+let lastTickMs = null;
+
+        /* ==========================================================================
+           BIKRAM SAMBAT (BS) DATE — calendar data for BS 2070–2099
+           ========================================================================== */
+        const BS_START = 2070;
+        const BS_ANCHOR = Date.UTC(2013, 3, 14); // 1 Baisakh 2070 = 14 April 2013
+        const BS_MONTH_DAYS = [
+            [31,31,31,32,31,31,29,30,30,29,30,30],
+            [31,31,32,31,31,31,30,29,30,29,30,30],
+            [31,32,31,32,31,30,30,29,30,29,30,30],
+            [31,32,31,32,31,30,30,30,29,29,30,31],
+            [31,31,31,32,31,31,30,29,30,29,30,30],
+            [31,31,32,31,31,31,30,29,30,29,30,30],
+            [31,32,31,32,31,30,30,30,29,29,30,30],
+            [31,32,31,32,31,30,30,30,29,30,29,31],
+            [31,31,31,32,31,31,30,29,30,29,30,30],
+            [31,31,32,31,31,31,30,29,30,29,30,30],
+            [31,32,31,32,31,30,30,30,29,29,30,30],
+            [31,32,31,32,31,30,30,30,29,30,29,31],
+            [31,31,32,31,31,31,30,29,30,29,30,30],
+            [31,31,32,31,31,31,30,29,30,29,30,30],
+            [31,31,32,31,31,30,30,30,29,30,30,30],
+            [31,32,31,32,30,31,30,30,29,30,30,30],
+            [30,32,31,32,31,30,30,30,29,30,30,30],
+            [31,31,32,31,31,31,30,30,29,30,30,30],
+            [30,31,32,32,30,31,30,30,29,30,30,30],
+            [30,32,31,32,31,30,30,30,29,30,30,30],
+            [30,32,31,32,31,30,30,30,29,30,30,30],
+            [31,31,32,31,31,31,30,30,29,30,30,30],
+            [30,31,32,32,31,30,30,30,29,30,30,30],
+            [30,32,31,32,31,30,30,30,29,30,30,30],
+            [31,31,32,31,31,30,30,30,29,30,30,30],
+            [31,31,32,31,31,31,30,29,30,30,30,30],
+            [30,31,32,32,31,30,30,29,30,29,30,30],
+            [31,32,31,32,31,30,30,30,29,30,30,30],
+            [31,31,32,31,31,31,29,30,29,30,29,31],
+            [31,32,31,32,31,30,30,30,29,29,30,31]
+        ];
+        const BS_MONTHS = ['बैशाख', 'जेठ', 'असार', 'श्रावण', 'भदौ', 'असोज', 'कार्तिक', 'मंसिर', 'पुष', 'माघ', 'फागुन', 'चैत'];
+        const BS_WEEKDAYS = ['आइतबार', 'सोमबार', 'मंगलबार', 'बुधबार', 'बिहीबार', 'शुक्रबार', 'शनिबार'];
+        function nepDigits(n) { return String(n).replace(/[0-9]/g, c => '०१२३४५६७८९'[c]); }
+        function adToBs(date) {
+            let d = Math.round((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - BS_ANCHOR) / 86400000);
+            if (d < 0) return null;
+            let yi = 0;
+            while (yi < BS_MONTH_DAYS.length) {
+                const len = BS_MONTH_DAYS[yi].reduce((a, b) => a + b, 0);
+                if (d >= len) { d -= len; yi++; } else break;
+            }
+            if (yi >= BS_MONTH_DAYS.length) return null;
+            let m = 0;
+            while (d >= BS_MONTH_DAYS[yi][m]) { d -= BS_MONTH_DAYS[yi][m]; m++; }
+            return { y: BS_START + yi, m, d: d + 1 };
+        }
+        function formatBsDate(date) {
+            const b = adToBs(date);
+            if (!b) return '';
+            return `${nepDigits(b.d)} ${BS_MONTHS[b.m]} ${nepDigits(b.y)}, ${BS_WEEKDAYS[date.getDay()]}`;
+        }
+
+        function tick() {
+            const now = new Date();
+            const nowMs = now.getTime();
+            const prevMs = lastTickMs ?? (nowMs - 1000);
+            lastTickMs = nowMs;
+            const h24 = now.getHours();
+            const m = now.getMinutes();
+            const s = now.getSeconds();
+            const dayIdx = now.getDay();
+
+            // 1. Update Live Clock
+            const clockEl = document.getElementById('liveClockTime');
+            const ampmEl = document.getElementById('liveClockAmPm');
+            if (appState.settings.use24Hour) {
+                clockEl.textContent = `${String(h24).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+                ampmEl.textContent = '';
+            } else {
+                const h12 = h24 % 12 || 12;
+                clockEl.textContent = `${String(h12).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+                ampmEl.textContent = h24 >= 12 ? 'PM' : 'AM';
+            }
+
+            // Date & Nepali Day
+            document.getElementById('nepaliDayBadge').textContent = NEPALI_DAYS[dayIdx];
+            const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+            const bsText = formatBsDate(now);
+            document.getElementById('currentDateDisplay').textContent = bsText ? `${bsText} (${dateStr})` : dateStr;
+
+            // 2. Effective Schedule & Status Badge
+            const info = getEffectiveScheduleInfo(now);
+            updateMasterStatusBadge(info);
+
+            document.getElementById('effectiveModeBadge').textContent = MODE_LABELS[info.mode] || info.mode;
+
+            // 3. Next Bell Calculation & Auto-Trigger
+            const nextNameEl = document.getElementById('nextBellName');
+            const nextTimeEl = document.getElementById('nextBellTimeText');
+            const nextCdEl = document.getElementById('nextBellCountdown');
+
+            if (info.paused) {
+                nextNameEl.textContent = info.reason;
+                nextTimeEl.textContent = 'स्वचालित घण्टी रोकिएको छ';
+                nextCdEl.textContent = '--:--:--';
+                if (currentNextBellId !== null) {
+                    currentNextBellId = null;
+                    renderScheduleTable();
+                }
+                return;
+            }
+
+            const nowSeconds = h24 * 3600 + m * 60 + s;
+            const currentHHMM = `${String(h24).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+
+            // Trigger every bell whose time passed since the previous tick (catches up if the
+            // browser throttled timers in a background tab); once per bell per day.
+            info.bells.forEach(bell => {
+                const [bh, bm] = bell.time.split(':').map(Number);
+                const bellMs = new Date(now.getFullYear(), now.getMonth(), now.getDate(), bh, bm, 0, 0).getTime();
+                if (bellMs > prevMs && bellMs <= nowMs && nowMs - bellMs < 120000) {
+                    const trigKey = `${dateStr}|${bell.time}|${bell.id}`;
+                    if (!lastTriggeredKeys.has(trigKey)) {
+                        lastTriggeredKeys.add(trigKey);
+                        if (!audioEngine.isUnlocked) {
+                            showToast('अडियो सक्रिय छैन — घण्टी नबज्न सक्छ। "अडियो सक्रिय गर्नुहोस्" थिच्नुहोस्।', 'error');
+                        }
+                        audioEngine.play(bell.sound, bell.duration, bell.label, appState.settings.voiceAnnouncement);
+                        showToast(`स्वचालित घण्टी बज्यो: ${bell.label}`, 'info');
+                    }
+                }
+            });
+
+            // Find upcoming bell today
+            let nextBell = null;
+            let diffSeconds = 0;
+
+            for (const bell of info.bells) {
+                const [bh, bm] = bell.time.split(':').map(Number);
+                const bellSec = bh * 3600 + bm * 60;
+                if (bellSec > nowSeconds) {
+                    nextBell = bell;
+                    diffSeconds = bellSec - nowSeconds;
+                    break;
+                }
+            }
+
+            if (nextBell) {
+                nextNameEl.textContent = nextBell.label;
+                nextTimeEl.textContent = `${formatDisplayTime(nextBell.time)} • ${getSoundName(nextBell.sound)}`;
+                nextCdEl.textContent = formatCountdown(diffSeconds);
+                if (currentNextBellId !== nextBell.id) {
+                    currentNextBellId = nextBell.id;
+                    renderScheduleTable();
+                }
+            } else {
+                nextNameEl.textContent = info.bells.length ? 'आजका सबै घण्टी सम्पन्न भए' : 'कुनै सक्रिय घण्टी छैन';
+                nextTimeEl.textContent = 'भोलिको समयतालिकाको प्रतीक्षामा';
+                nextCdEl.textContent = '00:00:00';
+                if (currentNextBellId !== null) {
+                    currentNextBellId = null;
+                    renderScheduleTable();
+                }
+            }
+        }
+
+        function updateMasterStatusBadge(info) {
+            const badge = document.getElementById('masterStatusBadge');
+            const text = document.getElementById('masterStatusText');
+            const dot = badge.querySelector('span:first-child');
+
+            if (info.paused) {
+                badge.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-red-500/20 text-red-200 border border-red-400/30';
+                dot.className = 'w-2.5 h-2.5 rounded-full bg-red-400';
+                text.textContent = info.reason;
+            } else {
+                badge.className = 'inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30';
+                dot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse';
+                text.textContent = 'स्वचालित घण्टी सक्रिय';
+            }
+        }
+
+        /* ==========================================================================
+           UI RENDERING & INTERACTIONS
+           ========================================================================== */
+        function getSoundName(soundKey) {
+            if (BUILTIN_SOUNDS[soundKey]) return BUILTIN_SOUNDS[soundKey];
+            if (soundKey && soundKey.startsWith('custom:')) {
+                const id = soundKey.replace('custom:', '');
+                const found = customAudios.find(a => a.id === id);
+                return found ? `🎵 ${found.name}` : '🎵 कस्टम अडियो (अनुपलब्ध)';
+            }
+            return BUILTIN_SOUNDS.electric;
+        }
+
+        function renderAll() {
+            // School header
+            document.getElementById('schoolNameDisplay').textContent = appState.school.name;
+            document.getElementById('schoolSubtitleDisplay').textContent = appState.school.subtitle;
+
+            // Clock format buttons
+            const btn12 = document.getElementById('btn12h');
+            const btn24 = document.getElementById('btn24h');
+            if (appState.settings.use24Hour) {
+                btn24.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-indigo-600 text-white shadow-sm transition';
+                btn12.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition';
+            } else {
+                btn12.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-indigo-600 text-white shadow-sm transition';
+                btn24.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition';
+            }
+
+            // Toggles & volume
+            document.getElementById('toggleHoliday').checked = !!appState.settings.holidayPause;
+            document.getElementById('toggleAutoWeekend').checked = !!appState.settings.autoOffWeekend;
+            document.getElementById('toggleVoice').checked = !!appState.settings.voiceAnnouncement;
+
+            const vol = appState.settings.volume ?? 85;
+            document.getElementById('volumeSlider').value = vol;
+            document.getElementById('volumeValue').textContent = `${vol}%`;
+            audioEngine.setVolume(vol);
+
+            // Mode Tabs
+            document.querySelectorAll('.mode-tab').forEach(btn => {
+                const isActive = btn.dataset.mode === appState.activeMode;
+                if (isActive) {
+                    btn.className = 'mode-tab px-4 py-2.5 text-sm font-bold rounded-t-xl border-b-2 border-indigo-600 bg-white text-indigo-700 transition whitespace-nowrap';
+                } else {
+                    btn.className = 'mode-tab px-4 py-2.5 text-sm font-bold rounded-t-xl border-b-2 border-transparent text-slate-500 hover:text-slate-800 hover:bg-slate-100/70 transition whitespace-nowrap';
+                }
+            });
+
+            renderScheduleTable();
+            renderCustomAudioList();
+        }
+
+        function renderScheduleTable() {
+            const tbody = document.getElementById('scheduleTableBody');
+            const emptyState = document.getElementById('emptyScheduleState');
+            const list = (appState.schedules[appState.activeMode] || [])
+                .slice()
+                .sort((a, b) => a.time.localeCompare(b.time));
+
+            tbody.innerHTML = '';
+            if (list.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            emptyState.classList.add('hidden');
+
+            list.forEach(bell => {
+                const isNext = bell.id === currentNextBellId;
+                const tr = document.createElement('tr');
+                tr.className = `transition ${isNext ? 'bg-indigo-50/70' : 'hover:bg-slate-50'} ${!bell.enabled ? 'opacity-55' : ''}`;
+
+                const durText = Number(bell.duration) === 0 ? 'पूरा अडियो' : `${bell.duration} से.`;
+                tr.innerHTML = `
+                    <td class="py-3.5 px-4 text-center">
+                        <label class="inline-flex items-center cursor-pointer">
+                            <input type="checkbox" ${bell.enabled ? 'checked' : ''} onchange="toggleBellEnabled('${bell.id}', this.checked)" class="sr-only peer">
+                            <div class="w-9 h-5 bg-slate-300 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-emerald-500 relative"></div>
+                        </label>
+                    </td>
+                    <td class="py-3.5 px-4 font-mono-clock font-bold text-slate-900 whitespace-nowrap">
+                        ${formatDisplayTime(bell.time)}
+                    </td>
+                    <td class="py-3.5 px-4">
+                        <div class="font-bold text-slate-900 flex items-center gap-2 flex-wrap">
+                            <span>${escapeHtml(bell.label)}</span>
+                            ${isNext ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-600 text-white">अर्को</span>' : ''}
+                        </div>
+                        <div class="sm:hidden text-xs text-slate-500 mt-0.5">${escapeHtml(getSoundName(bell.sound))} • ${durText}</div>
+                    </td>
+                    <td class="py-3.5 px-4 hidden sm:table-cell">
+                        <div class="text-xs font-semibold text-slate-700">${escapeHtml(getSoundName(bell.sound))}</div>
+                        <div class="text-[11px] text-slate-500">अवधि: ${durText}</div>
+                    </td>
+                    <td class="py-3.5 px-4 text-right whitespace-nowrap">
+                        <div class="inline-flex items-center gap-1.5">
+                            <button onclick="testBell('${bell.id}')" title="परीक्षण गर्नुहोस् (Test)" class="p-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 transition">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                            <button onclick="openBellModal('${bell.id}')" title="सम्पादन गर्नुहोस्" class="p-2 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z"/></svg>
+                            </button>
+                            <button onclick="confirmDeleteBell('${bell.id}')" title="हटाउनुहोस्" class="p-2 rounded-lg bg-red-50 hover:bg-red-100 text-red-600 transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
+                            </button>
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderCustomAudioList() {
+            const container = document.getElementById('customAudioList');
+            container.innerHTML = '';
+
+            if (customAudios.length === 0) {
+                container.innerHTML = `<div class="text-xs text-slate-400 text-center py-4 bg-slate-50 rounded-xl border border-dashed border-slate-200">अहिलेसम्म कुनै कस्टम अडियो अपलोड गरिएको छैन।</div>`;
+                return;
+            }
+
+            customAudios.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'flex items-center justify-between gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200/80';
+                div.innerHTML = `
+                    <div class="min-w-0">
+                        <div class="text-xs font-bold text-slate-800 truncate">🎵 ${escapeHtml(item.name)}</div>
+                        <div class="text-[10px] text-slate-500">${(item.size / (1024 * 1024)).toFixed(2)} MB</div>
+                    </div>
+                    <div class="flex items-center gap-1 shrink-0">
+                        <button onclick="playCustomAudio('${item.id}')" title="बजाउनुहोस्" class="p-1.5 rounded-lg bg-emerald-100 hover:bg-emerald-200 text-emerald-800 transition">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <button onclick="confirmDeleteCustomAudio('${item.id}')" title="हटाउनुहोस्" class="p-1.5 rounded-lg bg-red-100 hover:bg-red-200 text-red-700 transition">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function populateSoundSelect(selectedVal = 'electric') {
+            const select = document.getElementById('bellSoundSelect');
+            select.innerHTML = '';
+
+            const optGroupBuiltIn = document.createElement('optgroup');
+            optGroupBuiltIn.label = 'बिल्ट-इन घण्टी आवाजहरू (Offline)';
+            Object.entries(BUILTIN_SOUNDS).forEach(([key, label]) => {
+                const opt = document.createElement('option');
+                opt.value = key;
+                opt.textContent = label;
+                optGroupBuiltIn.appendChild(opt);
+            });
+            select.appendChild(optGroupBuiltIn);
+
+            if (customAudios.length > 0) {
+                const optGroupCustom = document.createElement('optgroup');
+                optGroupCustom.label = 'कस्टम अडियो लाइब्रेरी (MP3/WAV)';
+                customAudios.forEach(item => {
+                    const opt = document.createElement('option');
+                    opt.value = `custom:${item.id}`;
+                    opt.textContent = `🎵 ${item.name}`;
+                    optGroupCustom.appendChild(opt);
+                });
+                select.appendChild(optGroupCustom);
+            }
+
+            select.value = selectedVal;
+            if (!select.value) select.value = 'electric';
+        }
+
+        /* ==========================================================================
+           ACTIONS: MODES, SETTINGS, MANUAL RING, CRUD, UPLOAD, BACKUP
+           ========================================================================== */
+        function selectMode(mode) {
+            appState.activeMode = mode;
+            saveState();
+            renderAll();
+            tick();
+            showToast(`मोड परिवर्तन भयो: ${MODE_LABELS[mode]}`, 'info');
+        }
+
+        function setClockFormat(use24) {
+            appState.settings.use24Hour = use24;
+            saveState();
+            renderAll();
+            tick();
+        }
+
+        function updateSetting(key, val) {
+            appState.settings[key] = val;
+            saveState();
+            tick();
+            if (key === 'holidayPause') {
+                showToast(val ? 'सार्वजनिक बिदा मोड सक्रिय: सबै स्वचालित घण्टी बन्द।' : 'सार्वजनिक बिदा मोड हटाइयो: स्वचालित घण्टी सक्रिय।', val ? 'error' : 'success');
+            } else if (key === 'autoOffWeekend') {
+                showToast(val ? 'शनिबार र आइतबार स्वतः बन्द नियम सक्रिय गरियो।' : 'शनिबार र आइतबार स्वतः बन्द नियम हटाइयो।', 'info');
+            }
+        }
+
+        function handleVolumeChange(val) {
+            appState.settings.volume = Number(val);
+            document.getElementById('volumeValue').textContent = `${val}%`;
+            audioEngine.setVolume(Number(val));
+            saveState();
+        }
+
+        function manualRing(sound, duration, label) {
+            audioEngine.play(sound, duration, label, false);
+        }
+
+        function testBell(bellId) {
+            const list = appState.schedules[appState.activeMode] || [];
+            const bell = list.find(b => b.id === bellId);
+            if (!bell) return;
+            audioEngine.play(bell.sound, bell.duration, `${bell.label} (परीक्षण)`, appState.settings.voiceAnnouncement);
+        }
+
+        function toggleBellEnabled(bellId, enabled) {
+            const list = appState.schedules[appState.activeMode] || [];
+            const bell = list.find(b => b.id === bellId);
+            if (!bell) return;
+            bell.enabled = enabled;
+            saveState();
+            renderScheduleTable();
+            tick();
+        }
+
+        // Add / Edit Bell Modal
+        function openBellModal(bellId = null) {
+            const modal = document.getElementById('bellModal');
+            const titleEl = document.getElementById('bellModalTitle');
+            document.getElementById('bellEditId').value = bellId || '';
+
+            if (bellId) {
+                const bell = (appState.schedules[appState.activeMode] || []).find(b => b.id === bellId);
+                if (!bell) return;
+                titleEl.textContent = 'घण्टी सम्पादन गर्नुहोस्';
+                document.getElementById('bellTimeInput').value = bell.time;
+                document.getElementById('bellDurationInput').value = bell.duration;
+                document.getElementById('bellLabelInput').value = bell.label;
+                document.getElementById('bellEnabledInput').checked = bell.enabled;
+                populateSoundSelect(bell.sound);
+            } else {
+                titleEl.textContent = 'नयाँ घण्टी थप्नुहोस्';
+                document.getElementById('bellTimeInput').value = '10:00';
+                document.getElementById('bellDurationInput').value = 5;
+                document.getElementById('bellLabelInput').value = '';
+                document.getElementById('bellEnabledInput').checked = true;
+                populateSoundSelect('electric');
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeBellModal() {
+            document.getElementById('bellModal').classList.add('hidden');
+        }
+
+        function saveBellForm(e) {
+            e.preventDefault();
+            const editId = document.getElementById('bellEditId').value;
+            const time = document.getElementById('bellTimeInput').value;
+            const duration = Math.max(0, parseInt(document.getElementById('bellDurationInput').value, 10) || 0);
+            const label = document.getElementById('bellLabelInput').value.trim();
+            const sound = document.getElementById('bellSoundSelect').value;
+            const enabled = document.getElementById('bellEnabledInput').checked;
+
+            if (!time || !label) return;
+
+            const list = appState.schedules[appState.activeMode] || [];
+            if (editId) {
+                const idx = list.findIndex(b => b.id === editId);
+                if (idx !== -1) {
+                    list[idx] = { ...list[idx], time, duration, label, sound, enabled };
+                    showToast('घण्टी सफलतापूर्वक अपडेट भयो।', 'success');
+                }
+            } else {
+                list.push({
+                    id: 'b_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+                    time, duration, label, sound, enabled
+                });
+                showToast('नयाँ घण्टी थपियो।', 'success');
+            }
+
+            appState.schedules[appState.activeMode] = list;
+            saveState();
+            closeBellModal();
+            renderScheduleTable();
+            tick();
+        }
+
+        function confirmDeleteBell(bellId) {
+            openConfirmModal(
+                'घण्टी हटाउनुहोस्',
+                'के तपाईँ यो घण्टी समयतालिकाबाट हटाउन चाहनुहुन्छ?',
+                () => {
+                    appState.schedules[appState.activeMode] = (appState.schedules[appState.activeMode] || []).filter(b => b.id !== bellId);
+                    saveState();
+                    renderScheduleTable();
+                    tick();
+                    showToast('घण्टी हटाइयो।', 'info');
+                }
+            );
+        }
+
+        // School Header Edit Modal
+        function openSchoolModal() {
+            document.getElementById('schoolNameInput').value = appState.school.name;
+            document.getElementById('schoolSubtitleInput').value = appState.school.subtitle;
+            document.getElementById('schoolModal').classList.remove('hidden');
+        }
+
+        function closeSchoolModal() {
+            document.getElementById('schoolModal').classList.add('hidden');
+        }
+
+        function saveSchoolInfo(e) {
+            e.preventDefault();
+            const name = document.getElementById('schoolNameInput').value.trim();
+            const subtitle = document.getElementById('schoolSubtitleInput').value.trim();
+            if (!name) return;
+            appState.school.name = name;
+            appState.school.subtitle = subtitle;
+            saveState();
+            renderAll();
+            closeSchoolModal();
+            showToast('विद्यालयको विवरण सुरक्षित भयो।', 'success');
+        }
+
+        // Custom Audio Upload & Delete
+        async function loadCustomAudios() {
+            try {
+                const records = await AudioDB.getAll();
+                customAudios = records.map(r => ({
+                    id: r.id,
+                    name: r.name,
+                    size: r.blob ? r.blob.size : 0,
+                    createdAt: r.createdAt
+                })).sort((a, b) => b.createdAt - a.createdAt);
+                renderCustomAudioList();
+                renderScheduleTable();
+            } catch (err) {
+                console.error('IndexedDB load error:', err);
+            }
+        }
+
+        async function handleAudioUpload(e) {
+            const file = e.target.files[0];
+            e.target.value = '';
+            if (!file) return;
+
+            if (file.size > 25 * 1024 * 1024) {
+                showToast('कृपया २५ MB भन्दा सानो अडियो फाइल छान्नुहोस्।', 'error');
+                return;
+            }
+
+            try {
+                const id = 'aud_' + Date.now();
+                const cleanName = file.name.replace(/\.[^/.]+$/, '');
+                await AudioDB.put({
+                    id,
+                    name: cleanName,
+                    type: file.type,
+                    blob: file,
+                    createdAt: Date.now()
+                });
+                await loadCustomAudios();
+                showToast(`"${cleanName}" लाइब्रेरीमा सुरक्षित भयो!`, 'success');
+            } catch (err) {
+                console.error('Upload error:', err);
+                showToast('अडियो सुरक्षित गर्न समस्या आयो।', 'error');
+            }
+        }
+
+        function confirmDeleteCustomAudio(id) {
+            openConfirmModal(
+                'कस्टम अडियो हटाउनुहोस्',
+                'यो अडियो लाइब्रेरीबाट स्थायी रूपमा हट्नेछ। के तपाईँ निश्चित हुनुहुन्छ?',
+                async () => {
+                    try {
+                        await AudioDB.delete(id);
+                        await loadCustomAudios();
+                        showToast('कस्टम अडियो हटाइयो।', 'info');
+                    } catch (err) {
+                        showToast('अडियो हटाउन सकिएन।', 'error');
+                    }
+                }
+            );
+        }
+
+        // Export / Import / Reset
+        function exportScheduleJSON() {
+            const dataStr = JSON.stringify(Object.assign({}, appState, getLock() ? { lock: getLock() } : {}), null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `digital_bell_backup_${new Date().toISOString().slice(0, 10)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+            showToast('ब्याकअप JSON फाइल डाउनलोड भयो।', 'success');
+        }
+
+        function importScheduleJSON(e) {
+            const file = e.target.files[0];
+            e.target.value = '';
+            if (!file) return;
+            if (cloudMode && !canEdit()) { showToast('फाइल इम्पोर्ट गर्न Admin लगइन चाहिन्छ।', 'error'); return; }
+
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+                try {
+                    const imported = JSON.parse(ev.target.result);
+                    if (!imported || !imported.schedules) {
+                        showToast('अमान्य ब्याकअप फाइल।', 'error');
+                        return;
+                    }
+                    const lk = imported.lock;
+                    if (hasPin() && !isAdmin()) {
+                        if (!sameLock(lk)) { showToast('यो फाइल Admin को होइन। Admin PIN चाहिन्छ।', 'error'); return; }
+                        adoptPublished(imported);
+                        showToast('अपडेट सफल भयो!', 'success');
+                        return;
+                    }
+                    if (!hasPin() && lk && lk.hash && lk.salt) setLock({ salt: lk.salt, hash: lk.hash });
+                    const def = getDefaultState();
+                    appState = {
+                        school: { ...def.school, ...(imported.school || {}) },
+                        activeMode: MODE_LABELS[imported.activeMode] ? imported.activeMode : def.activeMode,
+                        settings: { ...def.settings, ...(imported.settings || {}) },
+                        schedules: { ...def.schedules, ...(imported.schedules || {}) }
+                    };
+                    saveState();
+                    renderAll();
+                    tick();
+                    showToast('समयतालिका सफलतापूर्वक रिस्टोर भयो!', 'success');
+                    applyAccessMode();
+                } catch (err) {
+                    showToast('फाइल पढ्न सकिएन। सही JSON फाइल छान्नुहोस्।', 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function confirmResetDefaults() {
+            openConfirmModal(
+                'डिफल्टमा फर्काउनुहोस्',
+                'तपाईँका सबै समयतालिका र सेटिङहरू सुरुवाती डिफल्ट अवस्थामा फर्किनेछन्। (कस्टम अडियो फाइल सुरक्षित रहनेछन्)',
+                () => {
+                    appState = getDefaultState();
+                    saveState();
+                    renderAll();
+                    tick();
+                    showToast('सबै सेटिङ डिफल्टमा फर्काइयो।', 'info');
+                }
+            );
+        }
+
+        /* ==========================================================================
+           HELPERS: RINGING BANNER, CONFIRM MODAL, TOASTS, ESCAPE
+           ========================================================================== */
+        function showRingingBanner(label, durationSec) {
+            document.getElementById('ringingLabel').textContent = label;
+            document.getElementById('ringingCountdown').textContent = durationSec > 0 ? `${durationSec} सेकेन्ड` : 'बज्दैछ...';
+            document.getElementById('ringingBanner').classList.remove('hidden');
+        }
+
+        function hideRingingBanner() {
+            document.getElementById('ringingBanner').classList.add('hidden');
+        }
+
+        function openConfirmModal(title, message, onConfirm) {
+            document.getElementById('confirmTitle').textContent = title;
+            document.getElementById('confirmMessage').textContent = message;
+            confirmCallback = onConfirm;
+            document.getElementById('confirmModal').classList.remove('hidden');
+        }
+
+        function closeConfirmModal() {
+            document.getElementById('confirmModal').classList.add('hidden');
+            confirmCallback = null;
+        }
+
+        document.getElementById('confirmActionBtn').addEventListener('click', () => {
+            if (typeof confirmCallback === 'function') confirmCallback();
+            closeConfirmModal();
+        });
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const colors = {
+                success: 'bg-emerald-600 text-white',
+                error: 'bg-red-600 text-white',
+                info: 'bg-slate-800 text-white'
+            };
+            const el = document.createElement('div');
+            el.className = `${colors[type] || colors.info} px-4 py-3 rounded-xl shadow-lg text-sm font-semibold flex items-center justify-between gap-3 pointer-events-auto transition-all duration-300`;
+            el.textContent = message;
+            container.appendChild(el);
+
+            setTimeout(() => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(8px)';
+                setTimeout(() => el.remove(), 300);
+            }, 3200);
+        }
+
+        function escapeHtml(str) {
+            return String(str || '').replace(/[&<>"']/g, m => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[m]));
+        }
+
+        function playCustomAudio(id) {
+            const item = customAudios.find(a => a.id === id);
+            audioEngine.play('custom:' + id, 0, item ? item.name : 'कस्टम अडियो', false);
+        }
+
+        function syncHeaderHeight() {
+            const h = document.querySelector('header');
+            if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+        }
+        window.addEventListener('resize', syncHeaderHeight);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeBellModal();
+                closeSchoolModal();
+                closeConfirmModal();
+            }
+        });
+
+        /* ==========================================================================
+           INITIALIZATION
+           ========================================================================== */
+        /* ==========================================================================
+           ADMIN PIN, VIEW-ONLY MODE, PUBLISHED SCHEDULE (schedule.json)
+           ========================================================================== */
+        const LOCK_KEY = STORAGE_KEY + '_lock';
+        let adminUntil = 0, pinFails = 0, pinLockedUntil = 0;
+
+        function getLock() { try { return JSON.parse(localStorage.getItem(LOCK_KEY)); } catch (e) { return null; } }
+        function setLock(o) { try { if (o) localStorage.setItem(LOCK_KEY, JSON.stringify(o)); else localStorage.removeItem(LOCK_KEY); } catch (e) {} }
+        function hasPin() { const l = getLock(); return !!(l && l.hash && l.salt); }
+        function isAdmin() { return Date.now() < adminUntil; }
+        function canEdit() { return cloudMode ? cloudIsAdmin : (!hasPin() || isAdmin()); }
+        function b64(buf) { let s = ''; new Uint8Array(buf).forEach(x => s += String.fromCharCode(x)); return btoa(s); }
+        function unb64(s) { return Uint8Array.from(atob(s), c => c.charCodeAt(0)); }
+
+        // PBKDF2-SHA1, 20000 iterations: same format as the Android app, so backups are interchangeable
+        async function pinHash(pin, salt) {
+            if (!(window.crypto && crypto.subtle)) throw new Error('nocrypto');
+            const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(pin), 'PBKDF2', false, ['deriveBits']);
+            return b64(await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-1', salt, iterations: 20000 }, key, 256));
+        }
+        async function checkPin(pin) {
+            const l = getLock(); if (!l) return true;
+            try { return (await pinHash(pin, unb64(l.salt))) === l.hash; } catch (e) { return false; }
+        }
+        async function makeLock(pin) {
+            const salt = crypto.getRandomValues(new Uint8Array(16));
+            return { salt: b64(salt), hash: await pinHash(pin, salt) };
+        }
+        function sameLock(o) { const l = getLock(); return !!(l && o && o.hash === l.hash && o.salt === l.salt); }
+
+        function showDialog(title, message, opts) {
+            const ov = document.createElement('div');
+            ov.style.cssText = 'position:fixed;inset:0;z-index:100;background:rgba(15,23,42,.6);display:flex;align-items:center;justify-content:center;padding:16px';
+            const box = document.createElement('div');
+            box.style.cssText = 'background:#fff;color:#0f172a;border-radius:16px;padding:20px;width:100%;max-width:360px;box-shadow:0 20px 50px rgba(0,0,0,.3)';
+            const h = document.createElement('div'); h.textContent = title; h.style.cssText = 'font-weight:800;font-size:17px;margin-bottom:6px'; box.appendChild(h);
+            if (message) { const p = document.createElement('div'); p.textContent = message; p.style.cssText = 'font-size:13px;color:#475569;margin-bottom:10px'; box.appendChild(p); }
+            let inp = null;
+            if (opts.input) {
+                inp = document.createElement('input');
+                inp.type = 'password'; inp.inputMode = 'numeric'; inp.autocomplete = 'off'; inp.placeholder = opts.input;
+                inp.style.cssText = 'width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:18px;letter-spacing:4px;margin-bottom:6px';
+                box.appendChild(inp); setTimeout(() => inp.focus(), 50);
+            }
+            const close = () => ov.remove();
+            const btns = opts.buttons || [];
+            btns.forEach(b => {
+                const btn = document.createElement('button');
+                btn.textContent = b.label;
+                btn.style.cssText = 'display:block;width:100%;margin-top:8px;padding:10px;border-radius:10px;border:0;font-weight:700;font-size:14px;cursor:pointer;' +
+                    (b.primary ? 'background:#4f46e5;color:#fff' : b.danger ? 'background:#fee2e2;color:#b91c1c' : 'background:#f1f5f9;color:#0f172a');
+                btn.onclick = () => b.onClick ? b.onClick(inp ? inp.value : '', close) : close();
+                box.appendChild(btn);
+            });
+            if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') { const pb = btns.find(x => x.primary); if (pb) pb.onClick(inp.value, close); } });
+            ov.appendChild(box); document.body.appendChild(ov);
+        }
+
+        function openAdminMenu() {
+            if (cloudMode) return cloudAdminMenu();
+            if (!hasPin()) return setPinFlow();
+            if (!isAdmin()) return loginFlow();
+            showDialog('🔓 Admin मोड', '१० मिनेट निष्क्रिय भए आफैँ लक हुन्छ।', { buttons: [
+                { label: '🔒 अहिले नै लक गर्नुहोस्', primary: true, onClick: (v, c) => { adminUntil = 0; c(); applyAccessMode(); } },
+                { label: 'Admin PIN फेर्नुहोस्', onClick: (v, c) => { c(); setPinFlow(); } },
+                { label: 'Admin PIN हटाउनुहोस्', danger: true, onClick: (v, c) => { c(); setLock(null); adminUntil = 0; applyAccessMode(); showToast('Admin PIN हटाइयो।', 'info'); } },
+                { label: 'रद्द' }
+            ] });
+        }
+
+        function loginFlow() {
+            if (Date.now() < pinLockedUntil) { showToast('धेरै गलत प्रयास। १ मिनेट पर्खनुहोस्।', 'error'); return; }
+            showDialog('🔑 Admin लगइन', 'Admin PIN लेख्नुहोस्', { input: 'PIN', buttons: [
+                { label: 'लगइन', primary: true, onClick: async (v, c) => {
+                    if (await checkPin(v)) { pinFails = 0; c(); adminUntil = Date.now() + 600000; applyAccessMode(); showToast('Admin मोड खुल्यो।', 'success'); }
+                    else { if (++pinFails >= 5) { pinLockedUntil = Date.now() + 60000; pinFails = 0; } showToast('गलत PIN', 'error'); }
+                } },
+                { label: 'रद्द' }
+            ] });
+        }
+
+        function setPinFlow() {
+            showDialog('नयाँ Admin PIN', 'कम्तिमा ४ अङ्क (६ अङ्क राम्रो)', { input: 'नयाँ PIN', buttons: [
+                { label: 'अर्को', primary: true, onClick: (p1, c) => {
+                    if (!/^\d{4,}$/.test(p1)) { showToast('PIN कम्तिमा ४ अङ्कको हुनुपर्छ।', 'error'); return; }
+                    c();
+                    showDialog('PIN फेरि लेख्नुहोस्', '', { input: 'PIN फेरि', buttons: [
+                        { label: 'सुरक्षित गर्नुहोस्', primary: true, onClick: async (p2, c2) => {
+                            if (p1 !== p2) { showToast('PIN मेल खाएन।', 'error'); return; }
+                            try { setLock(await makeLock(p1)); c2(); adminUntil = Date.now() + 600000; applyAccessMode(); showToast('Admin PIN सेट भयो। नबिर्सनुहोस्!', 'success'); }
+                            catch (e) { showToast('यो ब्राउजरमा PIN सुरक्षित गर्न मिलेन (HTTPS वा नयाँ ब्राउजर चाहिन्छ)।', 'error'); }
+                        } },
+                        { label: 'रद्द' }
+                    ] });
+                } },
+                { label: 'रद्द' }
+            ] });
+        }
+
+        function applyAccessMode() {
+            document.body.classList.toggle('viewer', !canEdit());
+            const b = document.getElementById('adminBtn');
+            if (b) b.textContent = cloudMode ? (cloudIsAdmin ? '🔓 Admin' : '🔒 Admin लगइन') : (!hasPin() ? '🔑 Admin PIN सेट' : (isAdmin() ? '🔓 Admin' : '🔒 हेर्ने मोड'));
+            renderAll();
+        }
+
+        function requireEdit() {
+            if (canEdit()) { if (isAdmin()) adminUntil = Date.now() + 600000; return true; }
+            showToast('यो परिवर्तन गर्न Admin लगइन चाहिन्छ।', 'error');
+            renderAll();
+            return false;
+        }
+
+        // Guard every editing function (also protects against the buttons being un-hidden by hand)
+        ['selectMode', 'openBellModal', 'saveBellForm', 'confirmDeleteBell', 'toggleBellEnabled', 'openSchoolModal', 'saveSchoolInfo',
+         'handleAudioUpload', 'confirmDeleteCustomAudio', 'confirmResetDefaults', 'manualRing', 'testBell', 'exportScheduleJSON'].forEach(n => {
+            const f = window[n];
+            if (typeof f !== 'function') return;
+            window[n] = function (...a) {
+                if (!requireEdit()) { const e = a[0]; if (e && e.preventDefault) e.preventDefault(); return; }
+                return f.apply(this, a);
+            };
+        });
+        const _updateSetting = window.updateSetting;
+        window.updateSetting = function (k, v) { if (!requireEdit()) return; return _updateSetting(k, v); };
+
+        setInterval(() => {
+            if (hasPin() && adminUntil && Date.now() >= adminUntil) { adminUntil = 0; applyAccessMode(); showToast('Admin सत्र सकियो, लक भयो।', 'info'); }
+        }, 15000);
+        document.addEventListener('pointerdown', () => { if (isAdmin()) adminUntil = Date.now() + 600000; }, true);
+
+        // Apply a schedule published by the admin (keeps this device's own volume / clock-format choices)
+        function adoptPublished(o) {
+            const def = getDefaultState();
+            appState.school = { ...def.school, ...(o.school || {}) };
+            if (MODE_LABELS[o.activeMode]) appState.activeMode = o.activeMode;
+            appState.schedules = { ...def.schedules, ...(o.schedules || {}) };
+            const st = o.settings || {};
+            ['holidayPause', 'autoOffWeekend', 'voiceAnnouncement'].forEach(k => { if (k in st) appState.settings[k] = st[k]; });
+            saveState(); renderAll(); tick();
+        }
+        function scheduleSig(o) {
+            const st = o.settings || {};
+            return JSON.stringify([o.school, o.activeMode, o.schedules, st.holidayPause, st.autoOffWeekend]);
+        }
+
+        // Teachers open the website: if the admin uploaded "schedule.json" next to this page, load it automatically
+        async function syncPublished() {
+            try {
+                if (cloudMode || isAdmin()) return;
+                const r = await fetch('schedule.json?_=' + Date.now(), { cache: 'no-store' });
+                if (!r.ok) return;
+                const o = await r.json();
+                if (!o || !o.schedules || !o.lock || !o.lock.hash || !o.lock.salt) return;
+                if (hasPin() && !sameLock(o.lock)) return;
+                if (hasPin() && scheduleSig(o) === scheduleSig(appState)) return;
+                if (!hasPin()) setLock({ salt: o.lock.salt, hash: o.lock.hash });
+                adoptPublished(o);
+                applyAccessMode();
+                showToast('Admin को नयाँ समयतालिका लोड भयो।', 'success');
+            } catch (e) { /* offline or no schedule.json: ignore */ }
+        }
+
+        /* ==========================================================================
+           ONLINE (FIREBASE): Admin signs in with Google; everyone else follows the published schedule
+           ========================================================================== */
+        const FIREBASE_CONFIG = {
+            apiKey: "AIzaSyB84iw1FPA1oACtDzb56sKdXIyxWR9F0jY",
+            authDomain: "jalpadevi-bell-c0aee.firebaseapp.com",
+            projectId: "jalpadevi-bell-c0aee",
+            storageBucket: "jalpadevi-bell-c0aee.firebasestorage.app",
+            messagingSenderId: "495286942894",
+            appId: "1:495286942894:web:8f80594187412160dd813f"
+        };
+        const ADMIN_UIDS = []; // optional: paste the admin's Firebase UID(s). The real protection is the Firestore rule.
+        const FB_VER = '10.14.1';
+        const cloudMode = !!FIREBASE_CONFIG.apiKey;
+        let cloudIsAdmin = false, fb = null, suppressPublish = false, publishTimer = null, cloudIdleUntil = 0;
+
+        async function cloudInit() {
+            if (!cloudMode || fb) return fb;
+            const base = `https://www.gstatic.com/firebasejs/${FB_VER}/`;
+            const [appM, authM, fsM] = await Promise.all([
+                import(base + 'firebase-app.js'), import(base + 'firebase-auth.js'), import(base + 'firebase-firestore.js')
+            ]);
+            const app = appM.initializeApp(FIREBASE_CONFIG);
+            const f = { authM, fsM, auth: authM.getAuth(app), db: fsM.getFirestore(app) };
+            f.ref = fsM.doc(f.db, 'schools', 'main');
+            fb = f;
+            authM.onAuthStateChanged(f.auth, onCloudAuth);
+            fsM.onSnapshot(f.ref, onCloudSnapshot, err => console.warn('cloud', err));
+            return f;
+        }
+
+        function onCloudAuth(user) {
+            const ok = !!(user && (ADMIN_UIDS.length === 0 || ADMIN_UIDS.includes(user.uid)));
+            if (user && !ok) { showToast('यो खाता Admin होइन। लगआउट गरियो।', 'error'); fb.authM.signOut(fb.auth); return; }
+            const was = cloudIsAdmin;
+            cloudIsAdmin = ok;
+            if (ok) { cloudIdleUntil = Date.now() + 1800000; if (!was) adminSyncDown(); }
+            applyAccessMode();
+        }
+
+        // After login: load what is online (or publish this browser's schedule if nothing is online yet)
+        async function adminSyncDown() {
+            try {
+                const snap = await fb.fsM.getDoc(fb.ref);
+                if (snap.exists()) { suppressPublish = true; adoptPublished(JSON.parse(snap.data().json)); applyAccessMode(); }
+                else { await publishCloud(); }
+            } catch (e) { showToast('ऑनलाइन डाटा लोड हुन सकेन: ' + (e.code || e.message), 'error'); }
+            finally { suppressPublish = false; }
+        }
+
+        function onCloudSnapshot(snap) {
+            if (cloudIsAdmin || !snap.exists()) return;
+            try {
+                const o = JSON.parse(snap.data().json);
+                if (scheduleSig(o) !== scheduleSig(appState)) {
+                    adoptPublished(o); applyAccessMode();
+                    showToast('Admin को नयाँ समयतालिका लोड भयो।', 'success');
+                }
+            } catch (e) { console.warn('bad cloud data', e); }
+        }
+
+        async function publishCloud() {
+            if (!cloudIsAdmin || !fb) return;
+            const st = appState.settings;
+            const o = { school: appState.school, activeMode: appState.activeMode, schedules: appState.schedules,
+                settings: { holidayPause: !!st.holidayPause, autoOffWeekend: !!st.autoOffWeekend, voiceAnnouncement: !!st.voiceAnnouncement } };
+            try {
+                await fb.fsM.setDoc(fb.ref, { json: JSON.stringify(o), updatedAt: Date.now(), updatedBy: fb.auth.currentUser.email });
+                showToast('✅ ऑनलाइन सुरक्षित भयो — सबै फोनमा अपडेट हुन्छ।', 'success');
+            } catch (e) { showToast('ऑनलाइन सुरक्षित गर्न सकिएन: ' + (e.code || e.message), 'error'); }
+        }
+
+        // Every change an admin saves is published (after a short pause so quick edits go out together)
+        const _saveState = window.saveState;
+        window.saveState = function () {
+            _saveState();
+            if (cloudMode && cloudIsAdmin && !suppressPublish) {
+                clearTimeout(publishTimer);
+                publishTimer = setTimeout(publishCloud, 800);
+            }
+        };
+
+        function authErrorText(e) {
+            const c = (e && e.code) || '';
+            if (['auth/invalid-credential', 'auth/wrong-password', 'auth/user-not-found', 'auth/invalid-email'].includes(c)) return 'इमेल वा पासवर्ड मिलेन।';
+            if (c === 'auth/too-many-requests') return 'धेरै गलत प्रयास। केही बेर पर्खेर फेरि प्रयास गर्नुहोस्।';
+            if (c === 'auth/network-request-failed') return 'इन्टरनेट जाँच्नुहोस्।';
+            if (c === 'auth/operation-not-allowed') return 'Firebase मा Email/Password लगइन खोलिएको छैन।';
+            if (c === 'auth/unauthorized-domain') return 'यो वेबसाइटको डोमेन Firebase मा अनुमति दिइएको छैन।';
+            return 'लगइन हुन सकेन: ' + (c || (e && e.message) || '');
+        }
+
+        function showEmailLogin() {
+            const ov = document.createElement('div');
+            ov.style.cssText = 'position:fixed;inset:0;z-index:100;background:rgba(15,23,42,.6);display:flex;align-items:center;justify-content:center;padding:16px';
+            const box = document.createElement('div');
+            box.style.cssText = 'background:#fff;color:#0f172a;border-radius:16px;padding:20px;width:100%;max-width:360px;box-shadow:0 20px 50px rgba(0,0,0,.3)';
+            const inpCss = 'width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px;margin-top:8px';
+            const btnCss = 'display:block;width:100%;margin-top:8px;padding:10px;border-radius:10px;border:0;font-weight:700;font-size:14px;cursor:pointer;';
+            const h = document.createElement('div'); h.textContent = '🔑 Admin लगइन'; h.style.cssText = 'font-weight:800;font-size:17px;margin-bottom:4px';
+            const p = document.createElement('div'); p.textContent = 'Admin को इमेल र पासवर्ड लेख्नुहोस्।'; p.style.cssText = 'font-size:13px;color:#475569';
+            const em = document.createElement('input'); em.type = 'email'; em.placeholder = 'इमेल'; em.autocomplete = 'username'; em.style.cssText = inpCss;
+            const pw = document.createElement('input'); pw.type = 'password'; pw.placeholder = 'पासवर्ड'; pw.autocomplete = 'current-password'; pw.style.cssText = inpCss;
+            const mk = (label, css, fn) => { const b = document.createElement('button'); b.textContent = label; b.style.cssText = btnCss + css; b.onclick = fn; return b; };
+            const doLogin = async () => {
+                const e = em.value.trim(), w = pw.value;
+                if (!e || !w) { showToast('इमेल र पासवर्ड दुवै लेख्नुहोस्।', 'error'); return; }
+                try { await fb.authM.signInWithEmailAndPassword(fb.auth, e, w); ov.remove(); showToast('Admin मोड खुल्यो।', 'success'); }
+                catch (err) { showToast(authErrorText(err), 'error'); }
+            };
+            const doReset = async () => {
+                const e = em.value.trim();
+                if (!e) { showToast('माथि इमेल लेख्नुहोस्, अनि फेरि थिच्नुहोस्।', 'error'); return; }
+                try { await fb.authM.sendPasswordResetEmail(fb.auth, e); showToast('यो इमेल दर्ता भएको छ भने पासवर्ड रिसेट लिङ्क पठाइयो।', 'success'); }
+                catch (err) { showToast(authErrorText(err), 'error'); }
+            };
+            pw.addEventListener('keydown', ev => { if (ev.key === 'Enter') doLogin(); });
+            box.append(h, p, em, pw,
+                mk('लगइन', 'background:#4f46e5;color:#fff', doLogin),
+                mk('पासवर्ड बिर्सनुभयो?', 'background:#f1f5f9;color:#0f172a', doReset),
+                mk('रद्द', 'background:#f1f5f9;color:#0f172a', () => ov.remove()));
+            ov.appendChild(box); document.body.appendChild(ov);
+            setTimeout(() => em.focus(), 50);
+        }
+
+        async function cloudAdminMenu() {
+            if (!fb) { try { await cloudInit(); } catch (e) { showToast('इन्टरनेट वा Firebase मा समस्या छ। पछि प्रयास गर्नुहोस्।', 'error'); return; } }
+            if (!cloudIsAdmin) {
+                showEmailLogin();
+                return;
+            }
+            showDialog('🔓 Admin: ' + fb.auth.currentUser.email, 'परिवर्तन सुरक्षित हुँदा सबै फोनमा आफैँ अपडेट हुन्छ। ३० मिनेट निष्क्रिय भए आफैँ लगआउट हुन्छ।', { buttons: [
+                { label: '☁ अहिले नै प्रकाशित गर्नुहोस्', primary: true, onClick: (v, c) => { c(); publishCloud(); } },
+                { label: 'लगआउट', onClick: (v, c) => { c(); fb.authM.signOut(fb.auth); } },
+                { label: 'रद्द' }
+            ] });
+        }
+
+        setInterval(() => {
+            if (cloudIsAdmin && fb && Date.now() > cloudIdleUntil) { fb.authM.signOut(fb.auth); showToast('सत्र सकियो, लगआउट भयो।', 'info'); }
+        }, 30000);
+        document.addEventListener('pointerdown', () => { if (cloudIsAdmin) cloudIdleUntil = Date.now() + 1800000; }, true);
+
+        window.onload = async function () {
+            syncHeaderHeight();
+            renderAll();
+            await loadCustomAudios();
+            tick();
+            setInterval(tick, 500);
+            applyAccessMode();
+            if (cloudMode) cloudInit().catch(e => console.warn('Firebase unavailable (offline?)', e));
+            syncPublished();
+            setInterval(syncPublished, 300000);
+            document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') syncPublished(); });
+        };
+    </script>
+</body>
+</html>
